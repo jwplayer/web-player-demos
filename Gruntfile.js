@@ -37,34 +37,36 @@ module.exports = function (grunt) {
       copy = [],
       concat = {},
       mustacheRender = [],
-      paths = {
-        root: '/',
-        css: 'staging-developer.jwplayer.com/css',
-        js: 'staging-developer.jwplayer.com/js',
-        img: 'staging-developer.jwplayer.com/img'
+      env = {
+        dev: true,
+        staging: false,
+        prod: false
+      },
+      path = {
+        host: 'developer.jwplayer.com',
+        asset: '//developer.jwplayer.com/',
+        href: '/'
       };
 
-    // if `--dev-mode` option was passed to override configurable data,
-    // require a `local-config.json` file, otherwise it does nothing
-    if (grunt.option('dev-mode') && grunt.file.exists('local-config.json')) {
+    // if a `local-config.json` file exists, override configurable data
+    if (grunt.file.exists('local-config.json')) {
       var local = grunt.file.readJSON('local-config.json');
-      paths.root = local.paths.root ? local.paths.root : paths.root;
-      paths.css = local.paths.css ? local.paths.css : paths.css;
-      paths.js = local.paths.js ? local.paths.js : paths.js;
-      paths.img = local.paths.img ? local.paths.img : paths.img;
+      path.asset = local.path.asset ? local.path.asset : path.asset;
+      path.href = local.path.href ? local.path.href : path.href;
     }
 
     // if a `--deploy-*` option was passed to specify build type
     if (grunt.option('deploy-production') || grunt.option('deploy-staging')) {
-      paths.root = '/jw-player/demos/';
+      path.asset = '/';
+      path.href = '/jw-player/demos/';
       if (grunt.option('deploy-production')) {
-        paths.css = 'developer.jwplayer.com/css';
-        paths.js = 'developer.jwplayer.com/js';
-        paths.img = 'developer.jwplayer.com/img';
+        env.dev = false;
+        env.prod = true;
+        path.host = 'developer.jwplayer.com';
       } else {
-        paths.css = 'staging-developer.jwplayer.com/css';
-        paths.js = 'staging-developer.jwplayer.com/js';
-        paths.img = 'staging-developer.jwplayer.com/img';
+        env.dev = false;
+        env.staging = true;
+        path.host = 'staging.jwplayer.com';
       }
     }
 
@@ -134,7 +136,8 @@ module.exports = function (grunt) {
           // mustache config for demo detail page
           mustacheRender.push({
             data: {
-              paths: paths,
+              env: env,
+              path: path,
               html: '<%= grunt.file.read("' + srcDir + 'index.html") %>',
               js: '\r\r<%= grunt.file.read("' + buildDir + 'js/build.js") %>\r',
               css: buildDir + 'css/build.css',
@@ -143,6 +146,13 @@ module.exports = function (grunt) {
               title: demo.title,
               description: demo.description,
               license: demo.license,
+              author: function() {
+                if (!demo.author || !demo.author.name) return null;
+                return {
+                  name: demo.author.name,
+                  githubUsername: demo.author.githubUsername || null
+                };
+              },
               showCode: function() {
                 return typeof demo.showCode !== 'undefined' ? demo.showCode : true;
               },
@@ -165,9 +175,10 @@ module.exports = function (grunt) {
       // mustache config for category demo index
       mustacheRender.push({
         data: {
+          env: env,
           title: 'JW Player Demos &amp; Code Examples',
           description: 'Explore demos and code examples extending JW Player feature functionality.',
-          paths: paths,
+          path: path,
           directory: cat.directory,
           categories: function() {
             var cats = [];
@@ -212,9 +223,10 @@ module.exports = function (grunt) {
     // mustache config for complete demo index
     mustacheRender.push({
       data: {
+        env: env,
         title: 'JW Player Demos &amp; Code Examples',
         description: 'Explore demos and code examples extending JW Player feature functionality.',
-        paths: paths,
+        path: path,
         categories: function() {
           var cats = [];
           for (var i = 0; i < categories.length; i++) {

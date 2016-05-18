@@ -3,8 +3,8 @@
 	"description": "Trigger an ad to play at any point during a piece of content",
 	"license": "Ads",
 	"showCode": true,
-  	"author": {
-  		"name": "JW Player",
-  		"githubProfile": "jwplayer"
-  	}
+	"author": {
+		"name": "JW Player",
+		"githubUsername": "jwplayer"
+	}
 }

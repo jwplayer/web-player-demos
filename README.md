@@ -1,6 +1,6 @@
 # JW Developer Demos
 
-This repository is for managing the [JW Player Developer Demos](https://developer.jwplayer.com/jw-player/demos/). It includes demos and code samples from the JW Player team as well as a Developer Showcase highlighting demos submitted by our developer community.
+This repository is for managing the [JW Player Developer Demos](//developer.jwplayer.com/jw-player/demos/). It includes demos and code samples from the JW Player team as well as a Developer Showcase highlighting demos submitted by our developer community.
 
 ## Demo Setup
 
@@ -8,7 +8,7 @@ All JW Developer demos can be downloaded and run locally. Build instructions and
 
 ### Build Instructions
 
-If you don't already have Node.js, please [download and install](https://nodejs.org/en/download/) it now.
+If you don't already have Node.js, please [download and install](//nodejs.org/en/download/) it now.
 
 Then, from the project root directory, `jwdeveloper-demos/`:
 
@@ -44,7 +44,7 @@ Only `index.html` and `config.json` are required for the build. In a basic setup
 
 Local assets (such as images, .txt files, etc...) referenced within the demo should be saved in the `assets` directory.
 
-We encourage you to use our [Demo Starter Kit](https://github.com/jwplayer/jwdeveloper-demos/tree/master/demos/developer-showcase/demo-starter-kit) as the basis for your project.
+We encourage you to use our [Demo Starter Kit](//github.com/jwplayer/jwdeveloper-demos/tree/master/demos/developer-showcase/demo-starter-kit) as the basis for your project.
 
 ## Contributing a Demo
 
@@ -52,7 +52,7 @@ Our developer community continues to amaze us with unique implementations of our
 
 ### Submissions
 
-Submitting a demo for consideration for the [JW Developer Showcase](developer.jwplayer.com/jw-player/demos/developer-showcase/) is easy.
+Submitting a demo for consideration for the [JW Developer Showcase](//developer.jwplayer.com/jw-player/demos/developer-showcase/) is easy.
 
 1. Fork this repository
 2. Duplicate the demo starter kit and build your demo
@@ -96,4 +96,4 @@ Key | Type | Value Description
 
 ## JW Developer Community
 
-You can [join the JW Developer Community](https://developer.jwplayer.com/sign-up/) and follow us on Twitter [@JWDevelopers](https://twitter.com/JWDevelopers) to be among the first to know about beta test opportunities, new developer documentation and toolkits, developer community events, and more.
+You can [join the JW Developer Community](//developer.jwplayer.com/sign-up/) and follow us on Twitter [@JWDevelopers](//twitter.com/JWDevelopers) to be among the first to know about beta test opportunities, new developer documentation and toolkits, developer community events, and more.

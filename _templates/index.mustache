@@ -17,7 +17,7 @@
 
     <ul class="demo-index-nav">
       {{#categories}}
-        <li><a href="{{paths.root}}{{#directory}}{{directory}}{{/directory}}"{{#current}} class="selected"{{/current}}>{{name}}</a></li>
+        <li><a href="{{&path.href}}{{#directory}}{{directory}}{{/directory}}"{{#current}} class="selected"{{/current}}>{{name}}</a></li>
       {{/categories}}
     </ul>
 
@@ -27,7 +27,7 @@
     <ul class="demo-index-list">
       {{#demos}}
         <li>
-          <a href="{{&paths.root}}{{category.directory}}/{{directory}}">
+          <a href="{{&path.href}}{{category.directory}}/{{directory}}">
             <div class="header {{category.directory}}">
               <div class="icon">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="86.9px" height="100px" viewBox="0 0 86.9 100" enable-background="new 0 0 86.9 100" xml:space="preserve">

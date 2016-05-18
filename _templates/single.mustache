@@ -19,11 +19,14 @@
           <path d="M89.6,14.7c4.3,4.3,4.3,11.3,0,15.5L58.4,61.5l31.2,31.2c4.3,4.3,4.3,11.3,0,15.5c-4.3,4.3-11.3,4.3-15.7,0l-39-39
             c-4.3-4.3-4.3-11.3,0-15.5l39.1-39C78.3,10.4,85.3,10.4,89.6,14.7z"/>
         </svg>
-        <a href="{{paths.root}}">Back to Demos</a>
+        <a href="{{&path.href}}">Back to Demos</a>
       </li>
       <li>
         <span>License:<strong>{{license}}</strong></span>
         <span>Player Version:<strong id="demo-player-version"></strong></span>
+        {{#author}}
+          <span>Author:{{#githubUsername}}<a href="http://github.com/{{githubUsername}}">{{/githubUsername}}<strong>{{name}}</strong>{{#githubUsername}}</a>{{/githubUsername}}</span>
+        {{/author}}
       </li>
       <li>
         <a href="//github.com/jwplayer/jwdeveloper-demos/tree/master/demos/{{category.directory}}/{{directory}}">Source Code</a>

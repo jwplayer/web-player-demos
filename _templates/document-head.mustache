@@ -4,32 +4,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{&title}}</title>
   <meta name="description" content="{{description}}" />
-  <meta name="google-site-verification" content="ke-K2lvR7rSTzOGVR7pIDw0dUKhTzsCScFN753TjgXs" />
-  <meta property="og:title" content="{{&title}}">
-  <meta property="og:description" content="{{description}}">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="">
-  <meta property="og:url" content="">
-  <meta property="og:site_name" content="">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@jwplayer">
-  <meta name="twitter:creator" content="@jwplayer">
-  <meta name="twitter:title" content="{{&title}}">
-  <meta name="twitter:description" content="{{description}}">
-  <meta name="twitter:image" content="">
-  <link rel="canonical" href="//" />
-  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="//{{&paths.css}}/developer.min.css">
+  {{^env.dev}}
+    <meta name="google-site-verification" content="ke-K2lvR7rSTzOGVR7pIDw0dUKhTzsCScFN753TjgXs" />
+    <meta property="og:title" content="{{&title}}">
+    <meta property="og:description" content="{{description}}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="//{{&path.host}}/img/demos-fb-share.png">
+    <meta property="og:url" content="//{{&path.host}}{{&path.href}}">
+    <meta property="og:site_name" content="JW Player Demos &amp; Code Examples">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@jwplayer">
+    <meta name="twitter:creator" content="@jwplayer">
+    <meta name="twitter:title" content="{{&title}}">
+    <meta name="twitter:description" content="{{description}}">
+    <meta name="twitter:image" content="//{{&path.host}}/img/demos-twitter-share.png">
+  {{/env.dev}}
+  <link rel="shortcut icon" href="{{&path.asset}}img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="{{&path.asset}}css/developer.min.css">
   {{#css}}
     <link rel="stylesheet" href="css/build.css">
   {{/css}}
-  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MBF9PW"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-MBF9PW');</script>
+  {{#env.prod}}
+    <link rel="canonical" href="//{{&path.host}}" />
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MBF9PW"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MBF9PW');</script>
+  {{/env.prod}}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="//{{&paths.js}}/developer.min.js"></script>
+  <script src="{{&path.asset}}js/developer.min.js"></script>
 </head>
