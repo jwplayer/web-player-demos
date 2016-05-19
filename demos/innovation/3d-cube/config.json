@@ -2,5 +2,8 @@
   "title": "3D Cube",
   "description": "This demo renders 6 videos simultaneously in a 3D rotating cube. Each face of the cube is a fully functional JW Player.",
   "license": "Free",
-  "showCode": false
+  "showCode": false,
+  "author": {
+  	"name": "Wilfred Meier"
+  }
 }
