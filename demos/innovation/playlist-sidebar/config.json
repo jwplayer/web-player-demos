@@ -1,0 +1,16 @@
+{
+  "title": "Custom Playlist Sidebar",
+  "description": "This example displays playlist items externally. Clicking a playlist item will commence playback.",
+  "license": "Free",
+  "showCode": "true",
+  "layout": "horizontal",
+  "apiCalls": [
+    "getPlaylist()",
+    "on('ready')",
+    "load()"
+  ],
+  "author": {
+  	"name": "JW Player",
+  	"githubUsername": "jwplayer"
+  }
+}
