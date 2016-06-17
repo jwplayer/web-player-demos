@@ -7,7 +7,6 @@
 		"on('play')", "on('beforePlay')", "setMute()", "getState()", "pause()", "resize()"
 	],
 	"author": {
-		"name": "Willie Meier",
-		"githubUsername": ""
-	}
+  		"name": "Wilfred Meier"
+   }
 }

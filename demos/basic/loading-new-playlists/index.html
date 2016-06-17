@@ -1,19 +1,23 @@
-<script src="//content.jwplatform.com/players/xJ7Wcodt-5QOesuLn.js"></script>
+<!--
+* Copyright 2016 Longtail Ad Solutions Inc.
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+* express or implied. See the License for the specific language
+* governing permissions and limitations under the License.
+-->
+
+<script src="//content.jwplatform.com/players/xJ7Wcodt-DbXZPMBQ.js"></script>
 <!-- 
 	Each button calls loadPlaylist() with a playlist
 -->
 <a href="javascript:loadPlaylist(playlistOne)">Tears of Steel</a><br/>
 <a href="javascript:loadPlaylist(playlistTwo)">Big Buck Bunny</a><br/>
 <a href="javascript:loadPlaylist(playlistThree)">Multi-Item Playlist</a>
-
-<script>
-//Define our three playlist arrays
-var playlistOne = [{"file": "//content.jwplatform.com/videos/C4lp6Dtd-640.mp4", "image": "//content.jwplatform.com/thumbs/C4lp6Dtd-640.jpg", "title": "Tears of Steel"}];
-var playlistTwo = [{"file": "//content.jwplatform.com/videos/bkaovAYt-640.mp4", "image":"//content.jwplatform.com/thumbs/bkaovAYt-640.jpg", "title": "Big Buck Bunny"}];
-var playlistThree = [{"file":"//content.jwplatform.com/videos/kaUXWqTZ-640.mp4", "image":"//content.jwplatform.com/thumbs/kaUXWqTZ-640.jpg", "title": "Elephant's Dream"},{"file": "//content.jwplatform.com/videos/C4lp6Dtd-640.mp4", "image": "//content.jwplatform.com/thumbs/C4lp6Dtd-640.jpg", "title": "Tears of Steel"},{"file": "//content.jwplatform.com/videos/bkaovAYt-640.mp4", "image":"//content.jwplatform.com/thumbs/bkaovAYt-640.jpg", "title": "Big Buck Bunny"}];
-
-//Create a function to load a playlist var
-function loadPlaylist(thePlaylist) {
-	jwplayer().load(thePlaylist)
-}
-</script>

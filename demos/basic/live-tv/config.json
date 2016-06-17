@@ -1,0 +1,13 @@
+{
+  "title": "Simulating Live TV",
+  "description": "A demo that simulates live TV. The playlist item and position are determined by system date/time.",
+  "license": "Free",
+    	"showCode": true,
+	"apiCalls": [
+		"on('ready')", "play()", "seek()", "playlistItem()"
+	],
+	"author": {
+		"name": "JW Player",
+		"githubUsername": "jwplayer"
+	}
+}

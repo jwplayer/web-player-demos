@@ -14,17 +14,24 @@
 * governing permissions and limitations under the License.
 -->
 
-<script src="//content.jwplatform.com/libraries/uxA8ETX2.js"></script>
+<script src="//content.jwplatform.com/libraries/z3exF2NE.js"></script>
 
+<div id="myElement"></div>
 
-<div id="adplayer">
-  <div id="player"></div>
-  <div id="adrectangle"></div>
-</div>
-<div id="timeline">
-    <img src="assets/timeline.png" alt="Ad Scheduling Timeline"/>
-    <div id="highlight"></div>
-</div>
+<script>
+	jwplayer("myElement").setup({
+	  file: "//content.jwplatform.com/videos/hWF9vG66-TNpruJId.mp4",
+	  image: "//content.jwplatform.com/thumbs/hWF9vG66-480.jpg",
+	  advertising: {
+	    client: "vast",
+	    tag: "assets/preroll.xml"
+	  },
+	});
+</script>
 
-<p>This demo visualizes the main components of the IAB VAST3 advertising standards. The video is setup with an extensive ad schedule that includes Skipping, Companions, Overlays and Podding.</p>
-<p>Use an IAB VAST3 compliant ad server to leverage all these monetization options.</p>
+<div id="myElement">&nbsp;</div>
+<h3 id="impression">(no ad impression yet)</h3>
+<h3 id="progress">(no ad progress yet)</h3>
+<h3 id="click">(no ad click yet)</h3>
+<h3 id="skip">(no ad skip yet)</h3>
+<h3 id="complete">(no ad complete yet)</h3>
