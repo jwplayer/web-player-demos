@@ -1,47 +1,20 @@
-.ListItems div {
-	align-content: left;
-	width: 480px; height: 200px;
-	text-indent: 0px;
-	background: #0e4d8f;
-	box-shadow: inset 0 3px 10px rgba(0,0,0,.85);
-	-webkit-box-shadow: inset 0 3px 10px rgba(0,0,0,.85);
-	-moz-box-shadow: inset 0 3px 10px rgba(0,0,0,.85);
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	-moz-border-radius-bottomleft: 5px;
-	-moz-border-radius-bottomright: 5px;
-	-webkit-border-bottom-left-radius: 5px;
-	-webkit-border-bottom-right-radius: 5px;
-	font-family: helvetica;
-	color: #0e4d8f;
-	text-decoration: none;
-	list-style-type: none;
-	list-style-position:inside;
-	padding:0 0 0 0px;    
+.sidebar {
+	width: 480px; 
+	height: 130px;
+	padding: 10px;
+	background: #222;
+	position: relative;
+	top: -30px;
 }
 
-.ListItems div li {
-	display: block;
+.sidebar li {
+	padding: 10px;
 	float: left;
-	list-style-type: none;
 	list-style: none;
-	padding: 15px 0 0 11px;
-	line-height:200%
 }
 
-.ListItems div a {
-	text-indent: 0px;
-	display: block;
-	background: #0e4d8f;
-	border: 1px solid #666;
-	height: 75px; width: 120px;
-	margin: 0;
+.sidebar a {
 	color: #ffffff;
-	text-decoration: none;
-	text-align:center;
-	margin: 0;
-	list-style-type: none;
-	list-style-position:inside;
-	margin:0;
-	line-height:200%;
+	font-size: 13px;
+	margin-top: 10px;
 }
