@@ -1,0 +1,20 @@
+.sidebar {
+	width: 480px; 
+	height: 130px;
+	padding: 10px;
+	background: #222;
+	position: relative;
+	top: -30px;
+}
+
+.sidebar li {
+	padding: 10px;
+	float: left;
+	list-style: none;
+}
+
+.sidebar a {
+	color: #ffffff;
+	font-size: 13px;
+	margin-top: 10px;
+}
