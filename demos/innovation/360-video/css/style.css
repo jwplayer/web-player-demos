@@ -1,0 +1,16 @@
+/* Ensure that the player uses all available width */
+.container .demo-layout-vertical .demo-layout-content {
+	width: 1000px;
+}
+
+#error {
+	display: none;
+}
+
+#error.active {
+	display: block;
+	padding: 20px 20px;
+	border: solid 1px #d9dde6;
+	border-radius: 3px;
+	background-color: #ffffff;
+}

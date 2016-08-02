@@ -1,0 +1,14 @@
+{
+  "title": "360° Video",
+  "description": "This demo showcases the JW Player VR plugin. The JW Player VR plugin allows you to play spherical videos within the JW Player in HTML5.",
+  "license": "Premium",
+  "showCode": false,
+  "layout": "horizontal",
+  "apiCalls": [
+    ""
+  ],
+  "author": {
+  	"name": "JW Player",
+  	"githubUsername": "jwplayer"
+  }
+}
