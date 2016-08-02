@@ -1,14 +1,14 @@
 {
-  "title": "Demo Starter Kit",
-  "description": "Create your own demo! We've provided a basic demo setup to help you get started.",
+  "title": "Seamlessly Looping a MP4",
+  "description": "This demo shows you how to cause the player to seamlessly loop a MP4.",
   "license": "Free",
   "showCode": true,
   "layout": "horizontal",
   "apiCalls": [
-    ""
+    ".on('ready')"
   ],
   "author": {
-  	"name": "JW Player",
-  	"githubUsername": "jwplayer"
+  	"name": "Alex Bussey",
+  	"githubUsername": "waxidiotic"
   }
 }
