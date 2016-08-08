@@ -1,0 +1,13 @@
+{
+  "title": "Audio Streaming + Metadata",
+  "description": "This example demonstrates how to extract metadata from an audio stream, allowing the ability to display information or poster images. Note that an HLS stream must include timed metadata to achieve this behavior.",
+  "license": "Premium",
+  "showCode": true,
+  "apiCalls": [
+	"on('meta')"
+  ],
+  "author": {
+	"name": "JW Player",
+	"githubUsername": "jwplayer"
+	}  
+}
