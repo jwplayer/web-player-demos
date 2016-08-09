@@ -1,0 +1,25 @@
+<script src="//content.jwplatform.com/libraries/z3exF2NE.js"></script>
+<div id="image"><img src="assets/jwlogo.png"/></div>
+
+<div id="metaData">Loading the player...</div>
+
+<!-- Setting up the player with an HLS stream that includes timed metadata -->
+<script>
+var playerInstance = jwplayer("metaData");
+playerInstance.setup({
+	file: 'assets/index.m3u8',
+	hlshtml: true,
+	height:30,
+	width: 300
+	});
+</script>
+
+<h2>Title:</h2>
+
+<p id="title">&nbsp;</p>
+
+<h2>Artist:</h2>
+
+<p id="artist">&nbsp;</p>
+
+<p>*Note that an HLS stream must include timed metadata to achieve this behavior.</p>
