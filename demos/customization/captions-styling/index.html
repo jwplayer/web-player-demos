@@ -1,0 +1,68 @@
+<!--
+* Copyright 2016 Longtail Ad Solutions Inc.
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+* express or implied. See the License for the specific language
+* governing permissions and limitations under the License.
+-->
+<div class="flex">
+	<div class ="flex-column">
+		<div class="settings">
+		<label>Text color:</label>
+		<input id="color" class="jscolor" onchange="update('color', '#'+this.jscolor)" value="fff">
+		<label>Text Opacity:</label>
+		<input id="fontOpacity" type="range" min="0" max="100" value="100" onchange="update('fontOpacity', this.value)">
+		<label>Background color:</label>
+		<input id="backgroundColor" class="jscolor" onchange="update('backgroundColor','#'+this.jscolor)" value="000">
+		<label>Background Opacity:</label>
+		<input id="backgroundOpacity" type="range" min="0" max="100" value="100" onchange="update('backgroundOpacity', this.value)">
+		</div>
+	</div>
+	<div class ="flex-column">
+		<div class="settings">
+
+		<label>Font Family:</label>
+		<select id="fontFamily" onchange="update('fontFamily', this.value)"> 
+		<option value="default">Default</option>
+		<option value="Courier New">Courier New</option>
+		<option value="Courier New Bold">Courier New Bold</option>
+		<option value="Times New Roman">Times New Roman</option>
+		<option value="lucida console">Lucida Console</option>
+		<option value="arial">Arial</option>
+		<option value="comic sans ms">Comic Sans</option>
+		<option value="impact">Impact</option>
+		<option value="copperplate">CopperPlate</option>
+		</select>
+
+		<label>Edge Style:</label>
+		<select id="edgeStyle" onchange="update('edgeStyle', this.value)"> 
+		<option value="none">None</option>
+		<option value="dropshadow">Drop Shadow</option>
+		<option value="raised">Raised</option>
+		<option value="depressed">Depressed</option>
+		<option value="uniform">Uniform</option>
+		</select>
+
+		<label>Window color:</label>
+		<input id="windowColor" class="jscolor" onchange="update('windowColor','#'+this.jscolor)" value="000">
+		<label>Window Opacity:</label>
+		<input id="windowOpacity" type="range" min="0" max="100" value="0" onchange="update('windowOpacity', this.value)">
+
+		</div>
+	</div>
+	<div class="flex-column" id="player">
+		<script src="//content.jwplatform.com/players/1g8jjku3-yo0beZEB.js"></script>
+	</div>
+</div>
+
+<h3>Created using <a href="https://github.com/EastDesire/jscolor/releases">jscolor</a>.</h3>
+<script>
+</script>
