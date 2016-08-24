@@ -1,5 +1,5 @@
 jwplayer('container').setup ({
-    file: 'https://569888080fa01.streamlock.net/live/jelly.stream/playlist.m3u8'
+    file: 'https://wowzaec2demo.streamlock.net/live/bigbuckbunny/playlist.m3u8'
 });
 
 function loadMPD(a) {
