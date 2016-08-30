@@ -1,0 +1,69 @@
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/rickshaw/1.4.6/rickshaw.min.css">
+
+
+    <script src="//ssl.p.jwpcdn.com/player/v/7.6.0/jwplayer.js"></script>
+    <script src="//cdn.streamroot.io/jw7-hlsjs-provider/stable/jw7-hlsjs-provider.js"></script>
+
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/rickshaw/1.4.6/rickshaw.min.js"> </script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"> </script>
+
+	<div class="demo-container text-center">
+
+        <div id="streamroot-player" ></div>
+
+        <div id="debug-section">
+
+
+            <div id="perf-container">
+                <div class="p2p-box">
+                    <div>P2P vs. HTTP</div>
+                    <div id="percent"></div>
+
+                </div>
+                
+                <div class="p2p-box has-no-peers">
+                    <span id="peers"></span>
+                    <span> PEERS CONNECTED</span>
+                </div>
+            </div>    
+
+            <div class="simulate-a-peer">
+                <span><a href="#" target="_blank">SIMULATE A PEER</a></span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="graph-container">
+
+        <div class="legend">
+            <div id="legend-p2p"></div>
+            P2P traffic
+            <div id="legend-cdn"></div>
+            HTTP traffic
+        </div>
+
+        <div id="p2pGraph"></div>
+
+    </div>
+
+    <div id="warning-not-compatible">
+        <p>To see peer-accelerated streaming in action, use the latest version of Chrome, Firefox or Opera. 
+        In other browsers, you can still watch the video, but will stream directly from the server.</p>
+    </div>
+
+
+
+    <div id="streamroot-description">
+      <p><a href="//streamroot.io">Streamroot</a> offers a state-of-the-art peer-accelerated streaming solution for online broadcasters. Combining traditional unicast delivery and P2P protocols, Streamroot offloads demand from servers by safely and securely connecting viewers watching streams simultaneously. It helps VOD and live streaming platforms scale naturally to growing audiences, better handle traffic spikes and offer better quality streams by delivering video from the source that can provide it mostly quickly.</p>
+      <br>
+      <p>Using JW Player’s modular framework to create our own custom provider, Streamroot offers a plug-and-play integration with JW Player. Our technology is plugin-free for viewers and integrates seamlessly into video platforms’ existing workflows.</p>
+      <br>
+      <p>To try Streamroot free with JW Player, sign up on our website at <a href="//dashboard.streamroot.io">dashboard.streamroot.io</a> or contact us at contact@streamroot.io.</p>
+    </div>

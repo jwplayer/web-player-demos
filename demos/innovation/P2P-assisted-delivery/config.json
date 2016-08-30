@@ -1,0 +1,11 @@
+{
+  "title": "Peer-accelerated delivery",
+  "description": "See how Streamroot's hybrid HTTP-P2P streaming in HTML5 can cut bandwidth costs and improve quality of experience.",
+  "license": "Free",
+  "showCode": false,
+  "apiCalls": ["registerProvider()"],
+  "author": {
+    "name": "Streamroot",
+    "githubUsername": "streamroot"
+  }
+}
