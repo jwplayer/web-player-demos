@@ -1,11 +1,25 @@
+/*#player-wrapper {*/
+	/*width:100%;*/
+	/*height:0;*/
+	/*overflow:hidden;*/
+	/*transition: height 2s;*/
+	/*-webkit-transition: height 2s;*/
+	/*float:left;*/
+	/*margin: 10px 20px 10px 0;}*/
+
 #player-wrapper {
-	width:480px;
-	height:0; 
-	overflow:hidden; 
-	transition: height 2s;
-	-webkit-transition: height 2s;
-	float:left; 
-	margin: 10px 20px 10px 0;}
+	height: 0px;
+	opacity: 0;
+	transition: height 300ms ease-in-out,
+		opacity 300ms ease-in-out,
+		visibility 300ms ease-in-out;
+	visibility: hidden;
+}
+
+#player-wrapper.jw-ad-visible {
+	opacity: 1;
+	visibility: visible;
+}
 
 /*
 overrides for developer site defaults (for presentation only, non-demo styles)
