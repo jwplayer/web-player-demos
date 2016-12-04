@@ -1,73 +1,99 @@
-/**
-* Some utility fcn's for listening for `video-in-view`
-*/
-var playerInstance = jwplayer('player'),
-    wrapper = document.querySelector('#player-wrapper'),    
-    scrollPlayed = false,
-    playerHeight,
-    checker = null,
-    elementPos = function(element) {
-        var bodyRect = document.body.getBoundingClientRect(),
-            elemRect = element.getBoundingClientRect();
-        return elemRect.top - bodyRect.top;
-    }, 
-    _bind = function(el, evt, fcn) {
-        el[window.addEventListener ? 'addEventListener' : 'attachEvent']( window.addEventListener ? evt : 'on' + evt, fcn, false);
-    },
-    scrollPos = function() {
-        var doc = document.documentElement;
-        return {
-            'left': (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0), 
-            'top': (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0)
-        };
-    },     
-    playerInView = function() {
-        var diff = playerOffset - scrollPos().top,
-            adjust = window.innerHeight > (playerHeight/2) ? window.innerHeight : 100,
-            inView = diff > -100 && diff < adjust;
-        return inView;        
-    },
-    playerOffset = elementPos(wrapper);
+// math functions related to scroll and offset positions relative to player
+var getScrollTop = function() {
+	var documentEl = document.documentElement;
+	return (window.pageYOffset || documentEl.scrollTop) - (documentEl.clientTop || 0);
+};
+var getElementOffsetTop = function(el) {
+	var bodyRect = document.body.getBoundingClientRect(),
+		elRect = el.getBoundingClientRect();
+	return elRect.top - bodyRect.top;
+};
+var	getAdInView = function() {
+	var scrollBoundary = playerOffsetTop + (playerHeight / 2),
+		scrollTop = getScrollTop();
+	return (window.innerHeight + scrollTop) > scrollBoundary && scrollTop < scrollBoundary;
+};
 
-/**
-* Setup the player
-*/
+// cross-browser event binding method
+var setEventListener = function(el, ev, fn) {
+	var eventMethod = window.addEventListener ? 'addEventListener' : 'attachEvent',
+		eventName = window.addEventListener ? ev : 'on' + ev;
+	el[eventMethod](eventName, fn, false);
+};
+
+// check if ad is in view, ad visible class when necessary (but only the first time it's in view)
+var setAdDisplayState = function() {
+	if (getAdInView()) {
+		if (!new RegExp('(^| )jw-ad-visible( |$)', 'gi').test(adEl.className)) {
+			adEl.className += (adEl.className ? ' ' : '') + 'jw-ad-visible';
+		}
+		playerInstance.play();
+	} else {
+		playerInstance.pause();
+	}
+};
+
+// player elements and utility vars
+var playerInstance = jwplayer('player'),
+  adEl = document.querySelector('.jw-ad'),
+  adContainerEl = document.querySelector('.jw-ad-container'),
+  playerHeight,
+  playerOffsetTop = getElementOffsetTop(adEl);
+
+// player setup
 playerInstance.setup({
-    file: 'blank.mp4',
-    advertising: {
-        client: 'vast',
-        tag: 'https://www.adotube.com/php/services/player/OMLService.php?avpid=oRYYzvQ&platform_version=vast20&ad_type=linear&groupbypass=1&HTTPS_REFERER=https://www.longtailvideo.com&video_identifier=longtailvideo.com,test'
-    }
+  file: 'blank.mp4',
+  advertising: {
+    client: 'vast',
+    tag: 'https://playertest.longtailvideo.com/vast-30s-ad.xml'
+  }
 });
 
 playerInstance.on('ready', function() {
-    // get player height once ready
-    playerHeight = playerInstance.getHeight(); 
-    /**
-    * Bind the scroll event to check for `video-in-view`
-    */
-    _bind(window, 'scroll', function(e) {
-        clearTimeout(checker);
-        if(playerInView()) {
-            wrapper.style.height = playerHeight + 'px';
-            checker = setTimeout(function() {
-                playerInstance.play(true);
-                scrollPlayed = true;            
-            }, 100);
-        }    
-        else {
-            playerInstance.pause(true);
-        }
-    });    
+
+	// get player container height
+	playerHeight = adContainerEl.offsetHeight;
+
+	// mute by default
+	playerInstance.setMute(true);
+
+	// unmute/mute player on adContainerEl mouse enter/leave
+	setEventListener(adContainerEl, 'mouseenter', function() {
+		playerInstance.setMute(false);
+	});
+
+	setEventListener(adContainerEl, 'mouseleave', function() {
+		playerInstance.setMute(true);
+	});
+
+	// handle ad display state on page load
+	setAdDisplayState();
+
+	// namespace for whether or not we are waiting for setTimeout() to finish
+	var isScrollTimeout = false;
+
+  // attach scroll event listener to window
+  setEventListener(window, 'scroll', function() {
+		// skip if we're waiting on a scroll update timeout to finish
+		if (isScrollTimeout) return;
+		// flag that a new timeout will begin
+		isScrollTimeout = true;
+		// otherwise, execute scroll event handler
+		setAdDisplayState();
+		// set new timeout
+		setTimeout(function() {
+			// reset timeout flag to false (no longer waiting)
+			isScrollTimeout = false;
+		}, 100);
+  });
 });
 
-/**
-* Collapse player after ad complete
-*/
+// handle when ad is complete or encounters error
 playerInstance.on('complete adComplete adError', function() {
-    wrapper.style.height = '0';
-    checker = setTimeout(function() {
-        playerInstance.remove();
-        wrapper.parentNode.removeChild(wrapper);
-    }, 2000); // should be the same duration as css transition
+	addClass(adEl, 'jw-ad-complete');
+  setTimeout(function() {
+		adEl.className += adEl.className + ' jw-ad-visible';
+    playerInstance.remove();
+    adContainerEl.parentNode.removeChild(adContainerEl);
+  }, 400 /* should be the same duration as css transition */);
 });
