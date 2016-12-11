@@ -1,0 +1,14 @@
+{
+  "title": "LogoBar-Branded Player Advertising",
+  "description": "A demo of LogoBars advanced event tracking capabilities.",
+  "license": "Ads",
+  "showCode": true,
+  "layout": "vertical",
+  "apiCalls": [
+	"on('time')","on('seeked')", "on('seek')", "on('pause')", "on('play')", "on('fullscreen')", "on('resize')", "on('firstFrame')", "on('adImpression')", "on('adComplete')"
+  ],
+  "author": {
+  	"name": "LogoBar",
+  	"githubUsername": "logbartv"
+  }
+}

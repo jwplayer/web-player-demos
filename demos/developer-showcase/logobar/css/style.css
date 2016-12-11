@@ -1,0 +1,47 @@
+.debug_tracking{
+	color:#2196f3 !important;
+}
+.debug_method{
+	display:none;
+}
+.debug_event{
+	display:none;
+}
+#debugDiv {
+	font-size:0.8rem !important;
+	overflow:auto;
+	height:100%;
+}
+#debugContainer {
+	display:inline-block;
+	float:right;
+	width:28%;
+	height:338px;
+	text-align:left;
+}
+.left-text   {
+	text-align: left;
+	float: left;
+}
+#lbDiv {
+	display: inline-block;
+	width: 70%;
+	float: left;
+}
+#playerWithEvents {
+	display: inline-block;
+	width: 100%;
+	padding-top: 20px
+}
+#benefits {
+	-moz-columns: 2;
+}
+ul {
+	margin-left: 30px;
+}
+.paddingbottom {
+	padding-bottom: 100px;
+}
+.paddingtop {
+	padding-top: 15px;
+}
