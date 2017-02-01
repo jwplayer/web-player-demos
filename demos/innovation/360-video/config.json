@@ -1,6 +1,6 @@
 {
   "title": "360° Video & VR",
-  "description": "This demo showcases the JW Player VR plugin. The JW Player VR plugin allows you to play spherical videos within the JW Player in HTML5. You can also try out our JW Player VR SDKs to play 360 Video in your native iOS & Android apps.",
+  "description": "This demo showcases the 360 Video / VR feature in JW Player for HTML5. JW Player can play spherical 360 videos in magic window mode and immersive VR mode, even in a playlist of mixed media.",
   "license": "Premium",
   "showCode": false,
   "layout": "horizontal",

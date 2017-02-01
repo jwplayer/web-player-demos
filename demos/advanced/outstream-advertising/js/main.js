@@ -21,28 +21,48 @@ var setEventListener = function(el, ev, fn) {
 	el[eventMethod](eventName, fn, false);
 };
 
+// get element margin top and bottom totat height
+var getMarginHeight = function(el) {
+	if (document.all) {
+		return parseInt(el.currentStyle.marginTop, 10) + parseInt(el.currentStyle.marginBottom, 10);
+	} else {
+		return parseInt(document.defaultView.getComputedStyle(el, '').getPropertyValue('margin-top')) + parseInt(document.defaultView.getComputedStyle(el, '').getPropertyValue('margin-bottom'));
+	}
+};
+
 // check if ad is in view, ad visible class when necessary (but only the first time it's in view)
 var setAdDisplayState = function() {
 	if (getAdInView()) {
 		if (!new RegExp('(^| )jw-ad-visible( |$)', 'gi').test(adEl.className)) {
 			adEl.className += (adEl.className ? ' ' : '') + 'jw-ad-visible';
+			adEl.style.maxHeight = adLabelEl.offsetHeight + getMarginHeight(adLabelEl) + adMediaContainerEl.offsetHeight + getMarginHeight(adMediaContainerEl) + 'px';
 		}
-		playerInstance.play();
+		if (playerInstance.getState() === 'idle' || playerInstance.getState() === 'paused') {
+			setTimeout(function() {
+				playerInstance.play();
+			}, 0);
+		}
 	} else {
-		playerInstance.pause();
+		if (playerInstance.getState() === 'playing') {
+			setTimeout(function() {
+				playerInstance.pause();
+			}, 0);
+		}
 	}
 };
 
 // player elements and utility vars
 var playerInstance = jwplayer('player'),
-  adEl = document.querySelector('.jw-ad'),
-  adContainerEl = document.querySelector('.jw-ad-container'),
+	adEl = document.querySelector('.jw-ad'),
+	adLabelEl = document.querySelector('.jw-ad-label'),
+  adMediaContainerEl = document.querySelector('.jw-ad-media-container'),
   playerHeight,
-  playerOffsetTop = getElementOffsetTop(adEl);
+  playerOffsetTop = getElementOffsetTop(adEl),
+	isScrollTimeout = false; // namespace for whether or not we are waiting for setTimeout() to finish
 
 // player setup
 playerInstance.setup({
-  file: 'blank.mp4',
+  file: 'http://content.jwplatform.com/videos/mX3zaT5H-Zq6530MP.mp4',
   advertising: {
     client: 'vast',
     tag: 'https://playertest.longtailvideo.com/vast-30s-ad.xml'
@@ -52,25 +72,22 @@ playerInstance.setup({
 playerInstance.on('ready', function() {
 
 	// get player container height
-	playerHeight = adContainerEl.offsetHeight;
+	playerHeight = adMediaContainerEl.offsetHeight;
 
 	// mute by default
 	playerInstance.setMute(true);
 
-	// unmute/mute player on adContainerEl mouse enter/leave
-	setEventListener(adContainerEl, 'mouseenter', function() {
+	// unmute/mute player on adMediaContainerEl mouse enter/leave
+	setEventListener(adMediaContainerEl, 'mouseenter', function() {
 		playerInstance.setMute(false);
 	});
 
-	setEventListener(adContainerEl, 'mouseleave', function() {
+	setEventListener(adMediaContainerEl, 'mouseleave', function() {
 		playerInstance.setMute(true);
 	});
 
 	// handle ad display state on page load
-	setAdDisplayState();
-
-	// namespace for whether or not we are waiting for setTimeout() to finish
-	var isScrollTimeout = false;
+	setTimeout(setAdDisplayState(), 1000);
 
   // attach scroll event listener to window
   setEventListener(window, 'scroll', function() {
@@ -90,10 +107,9 @@ playerInstance.on('ready', function() {
 
 // handle when ad is complete or encounters error
 playerInstance.on('complete adComplete adError', function() {
-	addClass(adEl, 'jw-ad-complete');
+	adEl.style.maxHeight = '0px';
   setTimeout(function() {
-		adEl.className += adEl.className + ' jw-ad-visible';
     playerInstance.remove();
-    adContainerEl.parentNode.removeChild(adContainerEl);
-  }, 400 /* should be the same duration as css transition */);
+    adMediaContainerEl.parentNode.removeChild(adMediaContainerEl);
+  }, 500 /* should be the same duration as css transition */);
 });

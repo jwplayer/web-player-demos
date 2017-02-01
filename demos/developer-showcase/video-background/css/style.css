@@ -1,0 +1,83 @@
+.video-background-demo {
+	/**
+	 * Flexbox isn't a requirement, but it makes alignment super easy for modern
+	 * browsers. The video will stretch to fill the available space, which will
+	 * cause some of the video to be cut off in many cases. You can control this
+	 * with media queries or making the container a fixed size.
+	 */
+	align-items: center;
+	display: flex;
+	height: 80vmin;
+	justify-content: center;
+	overflow: hidden;
+	position: relative;
+}
+
+.background-video-container {
+	/* The background property is used for the fading poster image */
+	background: 50% 50% / cover no-repeat;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.background-video-container::after {
+	/**
+	 * This overlay isn't necessary, but it may help with readability.
+	 * In modern browsers, the `mix-blend-mode` property can be adjusted to
+	 * show off some pretty funky effects when paired with a video.
+	 */
+	background-color: rgba(61, 56, 65, 0.75);
+	content: '';
+	height: 100%;
+	left: 0;
+	mix-blend-mode: multiply;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.background-video-container .jwplayer {
+	transition: opacity 1s ease-in-out;
+}
+
+.background-video-container.is-fading .jwplayer {
+	/**
+	 * When the video is within 2 seconds of completing, the .is-fading class
+	 * is added to the player so the poster image of the next video can be
+	 * displayed. This prevents any abrupt flashes or cuts between videos in
+	 * the playlist.
+	 */
+	opacity: 0;
+}
+
+.background-video-container .jwplayer.jw-flag-aspect-mode {
+	height: 100% !important;
+}
+
+.background-video-container .jw-state-playing {
+	opacity: 1;
+}
+
+.jwplayer.jw-stretch-uniform video {
+	object-fit: cover;
+}
+
+.jw-nextup-container {
+	display: none;
+}
+
+.video-background-demo .content {
+	color: #FFF;
+	position: relative;
+	width: 80%;
+	z-index: 1;
+}
+
+.video-background-demo .content h2 {
+	font-size: 2rem;
+	margin: 0 auto 2rem;
+	width: 80%;
+}
