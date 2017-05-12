@@ -58,7 +58,7 @@ playerInstance.on('ready', function() {
 
             utils.toggleClass(playerContainerEl, 'player-minimize', minimize);
             // update the player's size so the controls are adjusted
-            playerInstance.resize();
+//             playerInstance.resize(); This causes the player to black out in recent releases
         }
 
         // namespace for whether or not we are waiting for setTimeout() to finish
