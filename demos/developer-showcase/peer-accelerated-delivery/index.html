@@ -1,59 +1,20 @@
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rickshaw/1.4.6/rickshaw.min.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
+<script src="//content.jwplatform.com/libraries/DbXZPMBQ.js"></script>
+<script src="//cdn.streamroot.io/jw7-hlsjs-provider/stable/jw7-hlsjs-provider.js"></script>
+<script src="//tools.streamroot.io/usage-graphs/stable/graphs.js"></script>
 
+<div id="streamroot-container">
+	<div id="streamroot-player"></div>
+	<div id="streamroot-graphs-right"></div>
+</div>
+<div id="streamroot-graphs-left"></div>
 
-    <script src="//content.jwplatform.com/libraries/DbXZPMBQ.js"></script>
-    <script src="//cdn.streamroot.io/jw7-hlsjs-provider/stable/jw7-hlsjs-provider.js"></script>
+<div id="warning-not-compatible">
+	<p>To see peer-accelerated streaming in action, use the latest version of Chrome, Firefox or Opera. In other browsers, you can still watch the video, but it will stream directly from the server.</p>
+</div>
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/rickshaw/1.4.6/rickshaw.min.js"> </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"> </script>
-
-    <div id="streamroot-container">    
-        <div id="streamroot-player" ></div>
-
-        <div id="debug-section">
-
-            <div id="perf-container">
-                <div class="p2p-box">
-                    <div>P2P vs. HTTP</div>
-                    <div id="percent"></div>
-
-                </div>
-                
-                <div class="p2p-box has-no-peers">
-                    <span id="peers"></span>
-                    <span> PEERS CONNECTED</span>
-                </div>
-            </div>    
-
-            <div class="simulate-a-peer">
-                <span><a href="#" target="_blank">SIMULATE A PEER</a></span>
-            </div>
-
-        </div>
-    </div>
-
-        <div id="graph-container">
-
-            <div class="legend">
-                <div id="legend-p2p"></div>
-                P2P traffic
-                <div id="legend-cdn"></div>
-                HTTP traffic
-            </div>
-
-            <div id="p2pGraph"></div>
-
-        </div>
-
-        <div id="warning-not-compatible">
-            <p>To see peer-accelerated streaming in action, use the latest version of Chrome, Firefox or Opera. 
-            In other browsers, you can still watch the video, but it will stream directly from the server.</p>
-        </div>
-
-        <div id="streamroot-description">
-          <p>Streamroot is a peer-accelerated streaming solution for online broadcasters. Combining traditional unicast delivery and P2P protocols, Streamroot offloads demand from servers by safely and securely connecting viewers watching streams simultaneously.</p>
-          <br>
-          <p>Streamroot offers a plug-and-play integration with JW Player by using JW Player’s modular framework to create a custom provider. To learn more about using Streamroot with JW Player, sign up at <a href="//dashboard.streamroot.io">dashboard.streamroot.io</a> or contact them at <a href="mailto:contact@streamroot.io">contact@streamroot.io.</a></p>
-        </div>
+<div id="streamroot-description">
+	<p>Streamroot is a peer-accelerated streaming solution for online broadcasters. Combining traditional unicast delivery and P2P protocols, Streamroot offloads demand from servers by safely and securely connecting viewers watching streams simultaneously.</p>
+</br>
+	<p>Streamroot offers a plug-and-play integration with JW Player by using JW Player’s modular framework to create a custom provider. To learn more about using Streamroot with JW Player, sign up at <a href="//dashboard.streamroot.io">dashboard.streamroot.io</a>		or contact them at <a href="mailto:contact@streamroot.io">contact@streamroot.io.</a></p>
+</div>
