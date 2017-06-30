@@ -1,0 +1,12 @@
+{
+	"title": "Sharing Bar on Scroll",
+	"description": "Use JW Player's API to detect and verify when advertising events occur.",
+	"license": "Free",
+	"showCode": true,
+	"apiCalls": [ "play()", "on('play')", "on('pause')", "on('playlistItem')" ],
+	"layout": "vertical",
+	"author": {
+		"name": "Joshua Hatcher",
+		"githubUsername": "joshuahatcher"
+	}
+}

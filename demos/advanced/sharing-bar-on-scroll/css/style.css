@@ -1,0 +1,126 @@
+small {
+  color: gray;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+#player {
+  margin: 0;
+}
+
+.player-container {
+  float: left;
+  width: 50%;
+  margin: 0.5em 1em;
+}
+
+.footer-banner {
+  z-index: 1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: white;
+  width: 100%;
+  height: 70px;
+  padding: 0 2em;
+  border-top: 1px solid #ccc;
+  transform: translate(0, 100%);
+  transition: ease-in-out all 150ms;
+  text-align: left;
+}
+
+.footer-banner.is-visible {
+  transform: translate(0, 0);
+}
+
+.footer-banner .fb-share-button.fb_iframe_widget {
+  background: url(../assets/pause.svg) center no-repeat;
+}
+
+.footer-banner-container {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.banner-column {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  font-size: 1.2em;
+}
+
+.banner-column.banner-column-right {
+  justify-content: flex-end;
+}
+
+.icon {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+.banner-column-left .icon {
+  margin-right: 1em;
+}
+
+.banner-column-right .icon {
+  margin-left: 1em;
+}
+
+.facebook {
+  background: url(../assets/facebook.svg) center no-repeat;
+}
+
+.twitter {
+  background: url(../assets/twitter.svg) center no-repeat;
+}
+
+.playback-btn {
+  background: url(../assets/pause.svg) center no-repeat;
+  background-size: 30px;
+  border: 2px solid;
+  border-radius: 50%;
+}
+
+.footer-banner.is-paused .playback-btn {
+  background: url(../assets/play.svg) center no-repeat;
+  background-size: 30px;
+}
+
+.video-status::before {
+  content: 'Currently Watching: ';
+}
+
+.footer-banner.is-paused .video-status::before {
+  content: 'Continue Watching: '
+}
+
+.video-title {
+  font-weight: 400;
+}
+
+@media(max-width: 768px) {
+  .player-container {
+    float: none;
+    width: 100%;
+    margin: 0 0 1em;
+  }
+
+  .banner-column-left {
+    width: 100%;
+  }
+
+  .banner-column-right {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-column-left {
+    font-size: 1em;
+  }
+}
