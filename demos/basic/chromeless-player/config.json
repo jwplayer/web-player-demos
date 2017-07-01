@@ -1,9 +1,9 @@
 {
   "title": "Chromeless Player",
-  "description": "A demo setup where the video controls are hidden using controls: false.",
+  "description": "Hide the default player UI and build a custom interface using the JW Player API. Chromeless playback increases speed by eliminating load time for JW Player skins and controls.",
   "license": "Free",
     	"showCode": true,
-	"apiCalls": [],
+	"apiCalls": [ "play()", "pause()" ],
 	"author": {
 		"name": "JW Player",
 		"githubUsername": "jwplayer"
