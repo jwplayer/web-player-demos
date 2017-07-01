@@ -5,11 +5,4 @@ if (jwplayer().id) {
 		document.getElementById('demo-player-version').innerHTML = jwplayer.version.split('+')[0];
 	});
 }
-{{#author}}
-  {{#email}}
-    $(document).ready(function() {
-      $('.author-email').attr('href', '{{leftHandSide}}' + '@' + '{{rightHandSide}}');
-    });
-  {{/email}}
-{{/author}}
 </script>

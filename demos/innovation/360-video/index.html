@@ -13,23 +13,59 @@
 * express or implied. See the License for the specific language
 * governing permissions and limitations under the License.
 -->
-<script src="//content.jwplatform.com/libraries/DbXZPMBQ.js"></script>
+<script src="//content.jwplatform.com/libraries/VD8tlfTf.js"></script>
 <div id="vr-player"></div>
 <div id="error"></div>
 <div id="instructions">
-	<h3>Build your own immersive 360 video experiences</h3>
-	<p>
-		Premium edition customers and above can try our new JW Player HTML5 VR Plugin to support 360-degree spherical video on web.
-		Or download our JW Player VR SDKs to add 360 video playback to your native Android &amp; iOS applications.
-	</p>
-	<div class="vr-download-buttons">
-		<a class="btn md red" href="https://github.com/jwplayer/jwdeveloper-demos/tree/master/demos/innovation/360-video">VR Plugin for Web</a>
-		<a class="btn md red" href="https://developer.jwplayer.com/android-sdk/#android-downloads">VR SDK for Android</a>
-		<a class="btn md red" href="https://developer.jwplayer.com/ios-sdk/#ios-downloads">VR SDK for iOS</a>
+	<div id="steps">
+		<div id="setup-steps">
+			<h3>Getting started</h3>
+			<ol>
+				<h4>Cloud Player</h4>
+				<li>Sign into dashboard.jwplayer.com.</li>
+				<li>Navigate to the 'Videos' list.</li>
+				<li>Click on a 360 video you've uploaded.</li>
+				<li>On the video detail page, within the 360 video section check the ‘This is a 360 Video’ checkbox.</li>
+				<li>Click the Embed button and copy the JS Embed code into your website.</li>
+			</ol>
+
+			or
+
+			<ol>
+				<h4>Player Config</h4>
+				<li>You must already be using JW Player <span id="player-version"></span> with the Premium Edition license, or get it <a href="https://www.jwplayer.com/pricing/">here.</a></li>
+				<li>Follow our JW Player developer documentation for <a href="https://developer.jwplayer.com/jw-player/docs/developer-guide/customization/configuration-reference/#setup">setting up</a> your JW Player.</li>
+				<li>
+					Set the stereomode property on the playlist item in your player setup configuration:
+				</li>
+			</ol>
+		</div>
+		<pre><code class="html">var player = jwplayer('container').setup({
+	hlshtml: true,
+	playlist: [{
+		title: 'Caminandes VR',
+		mediaid: 'AgqYcfAT',
+		stereomode: 'monoscopic',
+		file: '//vr.jwplayer.com/content/AgqYcfAT/AgqYcfAT-8yQ1cYbs.mp4'
+	}]
+});</code></pre>
 	</div>
-	<h4 id="version"></h4>
-	<h3>Features</h3>
-	<p>
-		4K resolution • Adaptive bitrate streaming • Live streams • Monoscopic &amp; stereoscopic support • Gyroscope motion support • "Magic window" viewing • Customizable UI • Upload and stream 360° videos in JW Platform • Latest Chrome, Firefox &amp; Edge desktop browsers • Compatible with Cardboard, and Daydream VR headsets.
-	</p>
+
+	<div class="features">
+		<h3>Features</h3>
+		<p>
+			4K resolution • Adaptive bitrate streaming • Live streams • Monoscopic video support • Gyroscope motion support • "Magic window" viewing • Customizable UI • Upload and stream 360° videos in JW Platform • Latest Chrome, Firefox &amp; Edge desktop browsers • Compatible with Cardboard, and Daydream VR headsets.
+		</p>
+	</div>
+
+	<div class="features">
+		<h3>Add your own immersive 360 video experiences to your mobile apps</h3>
+		<p>
+			Download our JW Player VR SDK BETA to add 360 video playback to your native Android &amp; iOS applications. Implementation documentation is included in the SDK download packages.
+		</p>
+		<div class="vr-download-buttons">
+			<a class="btn md red" href="https://developer.jwplayer.com/android-sdk/#android-downloads">VR SDK for Android</a>
+			<a class="btn md red" href="https://developer.jwplayer.com/ios-sdk/#ios-downloads">VR SDK for iOS</a>
+		</div>
+	</div>
 </div>

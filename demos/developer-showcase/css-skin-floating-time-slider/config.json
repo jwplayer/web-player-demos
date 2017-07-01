@@ -1,0 +1,12 @@
+{
+  "title": "CSS Skin with Floating Time Slider",
+  "description": "Example of customizing the player theme with floating time slider.",
+  "license": "Free",
+  "showCode": "true",
+  "layout": "vertical",
+  "author": {
+  	"name": "Matthew Martindale",
+  	"githubUsername": "madikarizma",
+  	"email": "madikarizma@gmail.com"
+  }
+}

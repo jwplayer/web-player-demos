@@ -1,11 +1,28 @@
-#player-wrapper {
-	width:480px;
-	height:0; 
-	overflow:hidden; 
-	transition: height 2s;
-	-webkit-transition: height 2s;
-	float:left; 
-	margin: 10px 20px 10px 0;}
+.jw-ad {
+	max-height: 0;
+	margin: 0 auto;
+	max-width: 640px;
+	overflow: hidden;
+	text-align: center;
+	transition: max-height 500ms ease-out;
+	width: 100%;
+}
+
+.jw-ad-label {
+	background-color: rgba(0, 0, 0, 0.07);
+	border-radius: 2px;
+	color: rgba(0, 0, 0, 0.5);
+	display: inline-block;
+	font-size: 12px;
+	letter-spacing: 1px;
+	margin: 20px 0 10px;
+	padding: 5px 10px;
+	text-transform: uppercase;
+}
+
+.jw-ad-visible {
+	max-height: auto;
+}
 
 /*
 overrides for developer site defaults (for presentation only, non-demo styles)

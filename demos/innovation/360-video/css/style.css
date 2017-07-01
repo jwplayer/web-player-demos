@@ -14,6 +14,7 @@
 	border: solid 1px #d9dde6;
 	border-radius: 3px;
 	background-color: #ffffff;
+	margin-bottom: 35px;
 }
 
 #instructions h3 {
@@ -27,6 +28,10 @@
 	font-weight: 500;
 	margin-top: 20px;
 	margin-bottom: 20px;
+}
+
+#instructions li {
+	list-style-position: inside;
 }
 
 #instructions p {
@@ -44,6 +49,52 @@
 .vr-download-buttons > a:nth-child(1n+2) {
 	margin-top: 10px;
 }
+
+#steps {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #ccc;
+}
+
+#setup-steps {
+	display: flex;
+	flex-direction: column;
+	min-width: 50%;
+	text-align: center;
+}
+
+.features {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+}
+
+ol {
+	text-align: left;
+	font-weight: 400;
+	max-width: 600px;
+	margin: 0 auto;
+	padding-right: 40px;
+	min-width: 400px;
+}
+
+ol li {
+	margin: 10px 0;
+}
+
+ol li:before {
+	color: #ff0046;
+	font-weight: 600;
+}
+
+@media (max-width: 640px) {
+	#steps {
+		flex-direction: column;
+	}
+}
+
 
 @media (min-width: 515px) {
 	.vr-download-buttons > a.btn {

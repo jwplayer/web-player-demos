@@ -1,8 +1,9 @@
-var player = jwplayer();
+var pageReloaded = JSON.parse(localStorage.getItem('jwplayer.page-reloaded'));
 
-if (document.cookie.indexOf("jwplayerAutoStart") == -1) {
-  document.cookie = "jwplayerAutoStart=1";
-  player.on('ready', function() {
-    player.play();
-  });
-}
+var player = jwplayer('player').setup({
+  playlist: 'https://cdn.jwplayer.com/v2/media/xJ7Wcodt',
+  // Do not autostart if the page was reloaded.
+  autostart: pageReloaded ? !pageReloaded : true
+});
+
+localStorage.setItem('jwplayer.page-reloaded', true);

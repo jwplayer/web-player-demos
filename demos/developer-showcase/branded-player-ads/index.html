@@ -1,0 +1,71 @@
+<!--
+* Copyright 2016 Longtail Ad Solutions Inc.
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+* express or implied. See the License for the specific language
+* governing permissions and limitations under the License.
+-->
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div id="playerWithEvents">
+
+	<div id="lbDiv"></div>
+	<script src="//content.jwplatform.com/libraries/5iL2r8dY.js"></script>
+	<script type="text/javascript">
+		var playerInstance = jwplayer("lbDiv");
+		playerInstance.setup({
+			file: "//content.jwplatform.com/videos/aeZLVVPv-v7C1BfDE.mp4",
+			image: "//content.jwplatform.com/thumbs/aeZLVVPv-480.jpg",
+			height: "100%",
+			width: "70%"
+		});
+	</script>
+
+	<div id="debugContainer">
+		<small>Below you'll see each tracking event that LogoBar trigers as you interact with the player interface.</small>
+		<div id="debugDiv"></div>
+	</div>
+</div>
+
+<div class="left-text">
+
+	<p><strong>LogoBar</strong> is a patented digital advertising technology that brands components of streaming media players, and empowers marketers to interact with audiences while a video is playing without disrupting or delaying the content they are viewing. LogoBar gives publishers and advertisers a more efficient and effective way to elevate brand awareness and engagement while improving the audiences video viewing experience. LogoBar was the first to be awarded with IAB Tech Lab’s VAST 3.0 and VPAID 2.0 compliance.
+	</p>
+
+	<h3>Benefits include:</h3>
+
+	<ul class="benefits">
+		<li>Stronger performance than standard pre-rolls (Based on Nielsen and Newlio study, August 2016)
+			<ul>
+				<li>58% higher CTRs; 21% higher brand recall; 67% higher likelihood to engage </li>
+				<li>51% less intrusive and 15X higher user retention. </li>
+			</ul>
+		</li>
+		<li>Great for live streaming content, branded content, content syndication, AVOD and sponsorships.</li>
+		<li>New non-cannibalizing inventory generating incremental revenue without having to develop more content</li>
+		<li>Premium solution to package/sell adding value to existing ads</li>
+		<li>Stronger performance leads to higher client retention</li>
+		<li>Guaranteed visibility</li>
+		<li>Not susceptible to ad blocking</li>
+	</ul>
+
+	<p>LogoBar is VAST 3.0 and VPAID 2.0 compliant. Below are a sample plugin and LogoBar VAST tag that you can add to any standard JW Player javascript embed instance with a Premium license or above. Learn more at <a href="http://logobar.tv">logobar.tv</a></p>
+
+	<div class="instructions">
+		<p>Add the following plugin as a <strong>script</strong> tag on your page:</p>
+			<pre>"https://cdn2.logobar.tv/plugin/jw/lbplugin4jw.min.js"</pre>
+			<br/>
+		<p>Then add the following VAST tag next to your JW player instance:</p>
+	</div>
+</div>
+
+<script src="https://cdn2.logobar.tv/plugin/jw/lbplugin4jw.min.js"></script>

@@ -22,62 +22,62 @@ function getScrollTop() {
 
 // configure jwplayer instance
 playerInstance.setup({
-	autostart: true,
-	file: '//content.jwplatform.com/manifests/vM7nH0Kl.m3u8',
+  autostart: true,
+  file: '//content.jwplatform.com/manifests/vM7nH0Kl.m3u8',
   primary: 'html5',
-	setFullscreen: true,
+  setFullscreen: true,
   width: '100%'
 });
 
 // when jwplayer instance is ready
 playerInstance.on('ready', function() {
+        var config = playerInstance.getConfig();
+        var utils = playerInstance.utils;
+        // get height of player element
+        var playerHeight = config.containerHeight;
 
-  // get height of player element
-  var playerHeight = playerContainerEl.clientHeight;
+        // get player element position from top of document
+        var playerOffsetTop = getElementOffsetTop(playerContainerEl);
 
-  // get player element position from top of document
-  var playerOffsetTop = getElementOffsetTop(playerContainerEl);
+        // set player container to match height of actual video element
+        // this prevents container from disappearing and changing element positions
+        // on page when player becomes minimized. this also leaves a nice visual
+        // placeholder space for minimized player to return to when appropriate
+        playerContainerEl.style.height = playerHeight + 'px';
 
-  // set player container to match height of actual video element
-  // this prevents container from disappearing and changing element positions
-  // on page when player becomes minimized. this also leaves a nice visual
-  // placeholder space for minimized player to return to when appropriate
-  playerContainerEl.style.height = playerHeight + 'px';
+        // below we handle window scroll event without killing performance
+        // this is a minimal approach. please consider implementing something more extensive:
+        // i.e. http://joji.me/en-us/blog/how-to-develop-high-performance-onscroll-event
 
-  // below we handle window scroll event without killing performance
-  // this is a minimal approach. please consider implementing something more extensive:
-  // i.e. http://joji.me/en-us/blog/how-to-develop-high-performance-onscroll-event
+        // determine player display when scroll event is called
+        // if inline player is no longer visible in viewport, add class
+        // .player-minimize to minimize and float. otherwise, remove the class to put
+        // player back to inline inline position
+        function onScrollViewHandler() {
+            var minimize = getScrollTop() >= playerOffsetTop;
 
-  // determine player display when scroll event is called
-  // if inline player is no longer visible in viewport, add class
-	// .player-minimize to minimize and float. otherwise, remove the class to put
-	// player back to inline inline position
-  function onScrollViewHandler() {
-    var scrollTop = getScrollTop();
-    if (scrollTop >= playerOffsetTop) {
-      playerContainerEl.classList.add('player-minimize');
-    } else if (playerContainerEl.classList.contains('player-minimize')) {
-      playerContainerEl.classList.remove('player-minimize');
-    }
-  };
+            utils.toggleClass(playerContainerEl, 'player-minimize', minimize);
+            // update the player's size so the controls are adjusted
+            playerInstance.resize();
+        }
 
-  // namespace for whether or not we are waiting for setTimeout() to finish
-  var isScrollTimeout = false;
+        // namespace for whether or not we are waiting for setTimeout() to finish
+        var isScrollTimeout = false;
 
-  // window onscroll event handler
-  window.onscroll = function() {
-    // skip if we're waiting on a scroll update timeout to finish
-    if (isScrollTimeout) return;
-		// flag that a new timeout will begin
-		isScrollTimeout = true;
-		// otherwise, call scroll event view handler
-  	onScrollViewHandler();
-    // set new timeout
-    setTimeout(function() {
-			// reset timeout flag to false (no longer waiting)
-      isScrollTimeout = false;
-    }, 80);
+        // window onscroll event handler
+        window.onscroll = function() {
+            // skip if we're waiting on a scroll update timeout to finish
+            if (isScrollTimeout) return;
+            // flag that a new timeout will begin
+            isScrollTimeout = true;
+            // otherwise, call scroll event view handler
+            onScrollViewHandler();
+            // set new timeout
+            setTimeout(function() {
+                // reset timeout flag to false (no longer waiting)
+                isScrollTimeout = false;
+            }, 80);
 
-  };
+        };
 
-});
+    });

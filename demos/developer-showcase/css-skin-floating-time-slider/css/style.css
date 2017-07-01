@@ -1,0 +1,118 @@
+.jw-skin-custom .jw-background-color {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.jw-skin-custom .jw-controlbar {
+	align-items: center;
+	background: linear-gradient(180deg, transparent, black);
+	box-sizing: border-box;
+	display: flex;
+	height: auto;
+	left: 0;
+	padding: 10px 0;
+	right: 0;
+}
+
+.jw-skin-custom .jw-controlbar-center-group {
+	padding: 0 20px;
+	position: absolute;
+	top: -10px;
+}
+
+.jw-skin-custom .jw-controlbar-left-group,
+.jw-skin-custom .jw-controlbar-right-group {
+	flex: 1;
+	padding: 0 20px;
+}
+
+.jw-skin-custom .jw-controlbar-right-group {
+	text-align: right;
+}
+
+.jw-skin-custom .jw-slider-container,
+.jw-skin-custom .jw-rail,
+.jw-skin-custom .jw-buffer,
+.jw-skin-custom .jw-progress {
+	border-radius: 50px;
+}
+
+.jw-skin-custom .jw-rail {
+	background-color: rgba(247, 247, 247, 0.6);
+}
+
+.jw-skin-custom .jw-buffer {
+	background-color: rgba(235, 235, 235, 1);
+}
+
+.jw-skin-custom .jw-progress {
+	background-color: #00C669;
+}
+
+.jw-skin-custom .jw-knob {
+	background-color: #fff;
+	border: none;
+	border-radius: 100%;
+	box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+	display: block;
+	height: 16px;
+	transition: transform 200ms ease-in-out;
+	width: 16px;
+	z-index: 1;
+}
+
+.jw-skin-custom .jw-slider-horizontal .jw-knob:hover,
+.jw-skin-custom .jw-slider-horizontal .jw-knob:active {
+	transform: scale(1.3);
+}
+
+.jw-skin-custom .jw-slider-horizontal .jw-knob {
+	top: -6px;
+}
+
+.jw-skin-custom .jw-slider-vertical {
+	border-radius: 2px;
+	padding: 15px 12px;
+}
+
+.jw-skin-custom .jw-slider-vertical .jw-knob {
+	left: -6px;
+	margin-bottom: -8px;
+}
+
+.jw-skin-custom .jw-time-tip {
+	border-radius: 2px;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+	padding: 4px 4px 7px;
+}
+
+.jw-skin-custom .jw-time-tip .jw-text {
+	display: inline-block;
+	font-weight: bold;
+	line-height: normal;
+	margin-top: 7px;
+}
+
+.jw-skin-custom .jw-menu {
+	border-radius: 2px;
+	padding: 10px;
+}
+
+.jw-skin-custom .jw-menu .jw-option {
+	border-radius: 2px;
+	height: auto;
+	padding: 2px 10px;
+}
+
+.jw-skin-custom .jw-menu .jw-option + .jw-option {
+	margin-top: 2px;
+}
+
+.jw-skin-custom .jw-menu .jw-option:hover {
+	color: #fff;
+}
+
+.jw-skin-custom .jw-menu .jw-active-option {
+	background-color: #00C669;
+	color: #fff;
+	font-weight: bold;
+}

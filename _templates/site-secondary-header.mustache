@@ -1,14 +1,33 @@
 <div class="site-secondary-header">
-  {{#env.dev}}
-    <a href="{{&path.file}}jw-player/" class="selected">JW Player</a>
-    <a href="{{&path.file}}jw-platform/">JW Platform</a>
-    <a href="{{&path.file}}android-sdk/">Android SDK</a>
-    <a href="{{&path.file}}ios-sdk/">iOS SDK</a>
-  {{/env.dev}}
-  {{^env.dev}}
-    <a href="/jw-player/" class="selected">JW Player</a>
-    <a href="/jw-platform/">JW Platform</a>
-    <a href="/android-sdk/">Android SDK</a>
-    <a href="/ios-sdk/">iOS SDK</a>
-  {{/env.dev}}
+  <div class="site-secondary-header-container">
+		<div class="site-secondary-header-group">
+      <div class="site-secondary-header-dropdown">
+				<a class="site-secondary-header-dropdown-arrow" href="#"></a>
+				{{#env.dev}}
+			    <a href="{{&path.file}}jw-player/" class="site-secondary-header-dropdown-link is-selected">JW Player</a>
+			    <a href="{{&path.file}}jw-platform/" class="site-secondary-header-dropdown-link">JW Platform</a>
+			    <a href="{{&path.file}}android-sdk/" class="site-secondary-header-dropdown-link">Android SDK</a>
+			    <a href="{{&path.file}}ios-sdk/" class="site-secondary-header-dropdown-link">iOS SDK</a>
+			  {{/env.dev}}
+			  {{^env.dev}}
+			    <a href="/jw-player/" class="site-secondary-header-dropdown-link is-selected">JW Player</a>
+			    <a href="/jw-platform/" class="site-secondary-header-dropdown-link">JW Platform</a>
+			    <a href="/android-sdk/" class="site-secondary-header-dropdown-link">Android SDK</a>
+			    <a href="/ios-sdk/" class="site-secondary-header-dropdown-link">iOS SDK</a>
+			  {{/env.dev}}
+      </div>
+    </div>
+		{{#env.dev}}
+			<a href="{{&path.file}}jw-player/docs/developer-guide/api/javascript_api_reference/">API Reference</a>
+			<a href="{{&path.file}}jw-player/docs/developer-guide/">Developer Guide</a>
+			<a href="{{&path.file}}jw-player/demos">Demos</a>
+			<a href="{{&path.file}}jw-player/docs/developer-guide/release_notes/release_notes_7/">Release Notes</a>
+		{{/env.dev}}
+		{{^env.dev}}
+			<a href="/jw-player/docs/developer-guide/api/javascript_api_reference/">API Reference</a>
+			<a href="/jw-player/docs/developer-guide/">Developer Guide</a>
+			<a href="/jw-player/demos">Demos</a>
+			<a href="/jw-player/docs/developer-guide/release_notes/release_notes_7/">Release Notes</a>
+		{{/env.dev}}
+  </div>
 </div>

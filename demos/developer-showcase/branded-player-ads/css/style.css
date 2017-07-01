@@ -1,0 +1,84 @@
+.debug_tracking{
+	color:#2196f3 !important;
+}
+.debug_method{
+	display:none;
+}
+.debug_event{
+	display:none;
+}
+#debugDiv {
+	font-size: 15px;
+	padding: 10px 0;
+	font-weight: 400;
+	overflow: auto;
+}
+
+.material-icons {
+	position: relative;
+	top: 9px;
+}
+
+#debugContainer {
+	display:inline-block;
+	float:right;
+	width:28%;
+	height:338px;
+	text-align:left;
+}
+.left-text   {
+	text-align: left;
+	float: left;
+}
+#lbDiv {
+	display: inline-block;
+	width: 70%;
+	float: left;
+}
+#playerWithEvents {
+	display: inline-block;
+	width: 100%;
+	padding-top: 20px
+}
+
+.left-text h3 {
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 17px;
+	color: #000;
+}
+
+.left-text p {
+	padding-bottom: 20px;
+}
+
+.benefits {
+	-moz-columns: 2;
+}
+
+ul.benefits {
+	margin: 20px 0 20px 30px;
+	color: #475470;
+}
+
+ul.benefits li {
+	padding: 6px 0;
+	font-weight: 400;
+}
+
+ul.benefits li ul {
+	margin: 10px 0 0 30px;
+}
+
+.instructions {
+	text-align: center;
+}
+
+small {
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.hljs-comment {
+	color: #ffcc4d;
+}
