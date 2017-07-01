@@ -1,0 +1,16 @@
+{
+  "title": "Video Background",
+  "description": "Use JW Player to display a video as a background.",
+  "license": "Free",
+  "showCode": true,
+  "layout": "vertical",
+  "apiCalls": [
+    "on('complete')",
+    "on('firstFrame')",
+    "on('time')"
+  ],
+  "author": {
+    "name": "John Kreitlow",
+    "githubUsername": "radium-v"
+  }
+}

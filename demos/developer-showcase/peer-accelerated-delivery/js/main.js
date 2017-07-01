@@ -8,7 +8,6 @@
 			}],
 			p2pConfig: {
 				streamrootKey: 'demoswebsiteandpartners',
-				debug: true
 			},
 			hlsjsConfig: {
 				liveSyncDuration: 40,
@@ -23,5 +22,11 @@
 			height: 400,
 			autostart: true
 		});
+
+	if (!Streamroot.p2pAvailable) {
+		document.querySelector('#streamroot-graphs-left').setAttribute('style', 'display:none');
+		document.querySelector('#streamroot-graphs-right').setAttribute('style', 'display:none');
+		document.querySelector('#warning-not-compatible').setAttribute('style', 'display:block');
+	}
 
 })();

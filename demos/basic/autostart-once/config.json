@@ -3,9 +3,7 @@
   "description": "A demo setup that autostarts the video - but only for the first time a user visits the page.",
   "license": "Free",
     	"showCode": true,
-	"apiCalls": [
-		"on('ready')", "play()"
-	],
+	"apiCalls": [],
 	"author": {
 		"name": "JW Player",
 		"githubUsername": "jwplayer"

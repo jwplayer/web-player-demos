@@ -1,70 +1,23 @@
 #streamroot-container {
     display: flex;
-    position : relative;
-    justify-content: space-between;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-#graph-container {
-    margin-top: 40px
+#p2pPercentageComponent .p2pCircle {
+  background-color: transparent !important;
 }
 
-#streamroot-player {
-    display: flex;
-    margin : 0;
-    border-right : 20px;
-    flex-grow: 1;
-    margin-right: 20px4
+#streamroot-graphs-left {
+  display: none;
 }
 
-#p2pGraph {
-    margin: 10px 0px
-}
+@media all and (min-width: 800px) {
+  #streamroot-container { flex-wrap: nowrap; }
+  #streamroot-graphs-left { display: block; }
 
-#perf-container {
-    margin-bottom: 80px;
-}
-
-#debug-section {
-    margin : auto;
-}
-
-.detail {
-    display: none;
-}
-
-.simulate-a-peer a, .simulate-a-peer a:hover {
-    color :white;
-    text-decoration: none;
-}
-
-.simulate-a-peer:hover {
-    background-color: #0965c3;
-}
-
-.simulate-a-peer a:hover{
-    color :white;
-}
-
-.simulate-a-peer {
-    background-color: #0b7ef4;
-    width: 200px;
-    height: 40px;
-    overflow-x: scroll;
-    text-align: center;
-    border: 1px solid #0965c3;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 32px;
-    margin-top: 75px;
-    line-height: 40px;
-    color : #ffffff !important;
-    margin: 0 auto;
-}
-
-.legend {
-    text-align: left;
-    margin : 0px 0px -30px 20px;
 }
 
 #streamroot-description {
@@ -72,71 +25,9 @@
 }
 
 #warning-not-compatible {
-    display : none;
-    border: 1px solid #CF041C;
-    color : #CF041C;
-    padding : 10px;
-    margin : 10px 0px;
-
-}
-
-#legend-p2p, #legend-cdn{
-    width: 30px;
-    height: 10px;
-    display : inline-block;
-}
-
-#legend-p2p {
- background-color: #4fbcf2;
-
-}
-
-#legend-cdn {
-    background-color: #e65751;
-    margin-left: 30px;
-}
-
-#p2pGraph.rickshaw_graph > svg > g:first-child * {
-    stroke-width: 0;
-}
-
-#p2pGraph.rickshaw_graph > svg > g > path.area {
-    fill: #e65751;
-    opacity: 0.9;
-}
-
-#p2pGraph.rickshaw_graph > svg > g:nth-child(2) * {
-    stroke-width: 0;
-}
-
-#p2pGraph.rickshaw_graph > svg > g:nth-child(2) > path.area {
-    fill: #4fbcf2;
-    opacity: 0.9;
-}
-
-.x_ticks_d3, .y_ticks, #p2pGraph.rickshaw_graph > svg > text{
     display: none;
-}
-
-.p2p-box {
-    width: 300px;
-    overflow-x: scroll;
-    padding: 10px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 500;
-}
-
-#percent {
-    font-size: 50px;
-}
-
-.has-peers {
-    color: #197007;
-    border-color: #197007;
-}
-
-.has-no-peers {
+    border: 1px solid #CF041C;
     color: #CF041C;
-    border-color: #CF041C;
+    padding: 10px;
+    margin: 10px 0px;
 }
