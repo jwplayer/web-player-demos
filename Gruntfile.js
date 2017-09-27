@@ -1,5 +1,7 @@
 module.exports = function (grunt) {
+
   'use strict';
+
   // initial grunt configuration
   grunt.initConfig({
     'pkg': grunt.file.readJSON('package.json'),
@@ -16,25 +18,18 @@ module.exports = function (grunt) {
           base: 'build/demos',
           useAvailablePort: true,
           open: true,
-          liveReload: true
+          keepalive: true
         }
       }
-    },
-    watch: {
-      config: {
-        files: [
-          'demos/**/*.*'
-        ],
-        tasks: [
-          'default'
-        ]
-      }
-    },
+    }
   });
+
   // load grunt plugins
   require('load-grunt-tasks')(grunt);
+
   // grunt default task
   grunt.registerTask('default', function() {
+
     // config vars
     var categories = grunt.config('config.categories'),
       demos = {
@@ -53,12 +48,14 @@ module.exports = function (grunt) {
         file: '//developer.jwplayer.com/',
         href: '/'
       };
+
     // if a `local-config.json` file exists, override configurable data
     if (grunt.file.exists('local-config.json')) {
       var local = grunt.file.readJSON('local-config.json');
       path.file = local.path.file ? local.path.file : path.file;
       path.href = local.path.href ? local.path.href : path.href;
     }
+
     // if a `--deploy-*` option was passed to specify build type
     if (grunt.option('deploy-production') || grunt.option('deploy-staging')) {
       path.file = '/';
@@ -73,6 +70,7 @@ module.exports = function (grunt) {
         path.host = 'staging-developer.jwplayer.com';
       }
     }
+
     // sort array/object alphabetically on the `directory` property
     function sortABC(a, b) {
       var prop = 'directory';
@@ -84,45 +82,60 @@ module.exports = function (grunt) {
       }
       return sortStatus;
     }
+
     // loop categories and compile index and single pages for each child demo
     for (var i = 0; i < categories.length; i++) {
+
       // // if category is the full index
       if (!categories[i].directory) continue;
+
       // store category data in namespace
       var cat = categories[i];
+
       // namespace for category demo list
       demos[cat.directory] = [];
+
       // if directory does not exist even despite being in category list
       if (!grunt.file.isDir('demos/' + cat.directory)) continue;
+
       // scan category sub-directories to locate valid demos
       grunt.file.recurse('demos/' + cat.directory,
           function callback(absPath, rootDir, subDir, filename) {
+
         // we are looking for a config file, which is require per demo
         // when we find the config file, we process that directory as a demo
         if (filename == 'config.json') {
+
           // define demo-specific directory shortcuts
           var srcDir = 'demos/' + cat.directory + '/' + subDir + '/';
           var buildDir = 'build/' + srcDir;
+
           // get demo config json
           var demo = grunt.file.readJSON(srcDir + filename);
+
           // if demo has apiCalls key, filter empty array values
           if (demo.apiCalls) {
             demo.apiCalls = demo.apiCalls.filter(Boolean);
           } else {
             demo.apiCalls = [];
           }
+
           // append demo obj with demo category and directory
           demo['category'] = cat;
           demo['directory'] = subDir;
+
           // push demo data to both category and master demo list
           demos[cat.directory].push(demo);
           demos['all'].push(demo);
+
           // concat config for demo js
           grunt.file.write(buildDir + 'js/build.js', '');
           concat[buildDir + 'js/build.js'] = srcDir + 'js/*.js'
+
           // concat config for demo css
           grunt.file.write(buildDir + 'css/build.css', '');
           concat[buildDir + 'css/build.css'] = srcDir + 'css/*.css';
+
           // copy any additional directories developer has included in demo
           copy.push({
             expand: true,
@@ -130,6 +143,7 @@ module.exports = function (grunt) {
             src: ['**/*', '!js/**/*', '!css/**/*', '!config.json', '!index.html'],
             dest: buildDir
           });
+
           // mustache config for demo detail page
           mustacheRender.push({
             data: {
@@ -164,10 +178,14 @@ module.exports = function (grunt) {
             template: '_templates/single.mustache',
             dest: buildDir + 'index.html'
           });
+
         }
+
       });
+
       // sort demos within this category
       demos[cat.directory].sort(sortABC);
+
       // mustache config for category demo index
       mustacheRender.push({
         data: {
@@ -208,9 +226,12 @@ module.exports = function (grunt) {
         template: '_templates/index.mustache',
         dest: 'build/demos/' + cat.directory + '/index.html'
       });
+
     }
+
     // sort complete list of demos
     demos.all.sort(sortABC);
+
     // mustache config for search index
     mustacheRender.push({
       data: {
@@ -236,6 +257,7 @@ module.exports = function (grunt) {
       template: '_templates/search.mustache',
       dest: 'build/demos/search/index.html'
     });
+
     // mustache config for complete demo index
     mustacheRender.push({
       data: {
@@ -265,8 +287,10 @@ module.exports = function (grunt) {
       template: '_templates/index.mustache',
       dest: 'build/demos/index.html'
     });
+
     // create JSON file from demos data
     grunt.file.write('tmp/demos/data.json', JSON.stringify(demos['all'], null, 2));
+
     // add demos JSON data file to copy task
     copy.push({
       expand: true,
@@ -274,18 +298,21 @@ module.exports = function (grunt) {
       src: 'data.json',
       dest: 'build/demos'
     });
+
     // set copy config
     grunt.config('copy', {
       build: {
         files: copy
       }
     });
+
     // set concat config
     grunt.config('concat', {
       build: {
         files: concat
       }
     });
+
     // set mustache config
     grunt.config('mustache_render', {
       options: {
@@ -295,6 +322,7 @@ module.exports = function (grunt) {
         files: mustacheRender
       }
     });
+
     // run the task list
     grunt.task.run([
       'clean:build',
@@ -303,12 +331,13 @@ module.exports = function (grunt) {
       'mustache_render',
       'clean:tmp'
     ]);
+
   });
+
   // build and serve locally
   grunt.registerTask('serve', [
     'default',
-    'connect',
-    'watch'
+    'connect'
   ]);
-};
 
+};
