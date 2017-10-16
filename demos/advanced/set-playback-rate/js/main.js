@@ -1,7 +1,6 @@
 // Start User Controlled Example
 jwplayer('user-player').setup({
-  file: '//content.jwplatform.com/manifests/gaCRFWjn.m3u8',
-  image: '//content.jwplatform.com/thumbs/gaCRFWjn-720.jpg',
+playlist: 'https://cdn.jwplayer.com/v2/media/gaCRFWjn',
   // Set the available playback rates of your choice
   playbackRateControls: [0.75, 1, 1.25, 1.5],
   autostart: false,
@@ -113,8 +112,7 @@ function resetPlaybackRate(player, currentTime) {
 }
 
 initPublisherPlayer({
-  file: '//content.jwplatform.com/videos/QcK3l9Uv-cIp6U8lV.mp4',
-  image: '//content.jwplatform.com/thumbs/QcK3l9Uv-720.jpg',
+  playlist: 'https://cdn.jwplayer.com/v2/media/QcK3l9Uv',
   controls: false,
   autostart: false,
   mute: true

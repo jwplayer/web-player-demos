@@ -11,10 +11,10 @@
       playlist: '//cdn.jwplayer.com/v2/media/4yN3Zspm',
       autostart: true,
       mute: true
-    });
-
-    // We will want to pause the video when it is only ten percent visible
-    scrollThreshold = getBottomTenPercentDepth(document.getElementById('player'));
+    }).on('ready', function() {
+      // We will want to pause the video when it is only ten percent visible
+      scrollThreshold = getBottomTenPercentDepth(document.getElementById('player'));
+    })
 
     attachEvents(player);
   }
@@ -34,7 +34,9 @@
   }
 
   function togglePlaybackOnClick() {
-    player.play(banner.classList.contains('is-paused'));
+    var isPaused = banner.classList.contains('is-paused');
+
+    togglePlayback(isPaused);
   }
 
   function togglePlaybackDisplay(method) {
@@ -62,7 +64,7 @@
 
   function update() {
     toggleBanner();
-    togglePlayback();
+    togglePlaybackOnScroll();
 
     ticking = requestAnimationFrame(update);
   }
@@ -75,13 +77,21 @@
     }
   }
 
-  function togglePlayback() {
+  function togglePlaybackOnScroll() {
     lastThresholdCrossed = lastScrollHeight > scrollThreshold;
     currentThresholdCrossed = window.pageYOffset > scrollThreshold;
 
     if (lastThresholdCrossed !== currentThresholdCrossed) {
       // If user has scrolled beyond the threshold set, pause the video; otherwise play.
-      player.play(!currentThresholdCrossed);
+      togglePlayback(!currentThresholdCrossed);
+    }
+  }
+
+  function togglePlayback(triggerPlay) {
+    if (triggerPlay) {
+      player.play();
+    } else {
+      player.pause();
     }
   }
 

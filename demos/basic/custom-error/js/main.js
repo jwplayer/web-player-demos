@@ -1,10 +1,11 @@
 var player = jwplayer('player');
 
+// Trigger error on player setup
 player.setup({
-  file: "rtmp://fms.12E5.edgecastcdn.net/0012E5/videos/Qvxp3Jnv-68183.flv",
-  image: "//s.jwpcdn.com/thumbs/RxiqSWej-640.jpg"
+  file: "//content.jwplatform.com//videos/not-a-real-video-file.mp4"
 });
 
+// Load custom video file on error
 player.on('error', function() {
   player.load({
     file:"//content.jwplatform.com/videos/7RtXk3vl-52qL9xLP.mp4",
@@ -13,6 +14,7 @@ player.on('error', function() {
   player.play();
 });
 
+// Also load custom video file on buffer
 player.on('buffer', function() {
   theTimeout = setTimeout(function() {
     player.load({

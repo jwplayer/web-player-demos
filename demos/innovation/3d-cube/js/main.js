@@ -2,7 +2,7 @@ var r = Math.random();
 
 jwplayer("player1").setup({
   file: "//content.jwplatform.com/videos/i3q4gcBi-FctPAkow.mp4",
-  image: "//content.jwplatform.com/thumbs/i3q4gcBi-1280.jpg",
+  image: "//content.jwplatform.com/thumbs/i3q4gcBi-300.jpg",
   stretching: "fill",
   width: 300,
   height: 300,
@@ -11,7 +11,7 @@ jwplayer("player1").setup({
 
 jwplayer("player2").setup({
   file: "//content.jwplatform.com/videos/tkM1zvBq-FctPAkow.mp4",
-  image: "//content.jwplatform.com/thumbs/tkM1zvBq-1280.jpg",
+  image: "//content.jwplatform.com/thumbs/tkM1zvBq-300.jpg",
   stretching: "fill",
   width: 300,
   height: 300,
@@ -20,7 +20,7 @@ jwplayer("player2").setup({
 
 jwplayer("player3").setup({
   file: "//content.jwplatform.com/videos/RDn7eg0o-FctPAkow.mp4",
-  image: "//content.jwplatform.com/thumbs/RDn7eg0o-1280.jpg",
+  image: "//content.jwplatform.com/thumbs/RDn7eg0o-300.jpg",
   stretching: "fill",
   width: 300,
   height: 300,
@@ -29,7 +29,7 @@ jwplayer("player3").setup({
 
 jwplayer("player4").setup({
   file: "//content.jwplatform.com/videos/7CWdQFCL-FctPAkow.mp4",
-  image: "//content.jwplatform.com/thumbs/7CWdQFCL-1280.jpg",
+  image: "//content.jwplatform.com/thumbs/7CWdQFCL-300.jpg",
   stretching: "fill",
   width: 300,
   height: 300,
@@ -38,7 +38,7 @@ jwplayer("player4").setup({
 
 jwplayer("player5").setup({
   file: "//content.jwplatform.com/videos/jumBvHdL-FctPAkow.mp4",
-  image: "//content.jwplatform.com/thumbs/jumBvHdL-1280.jpg",
+  image: "//content.jwplatform.com/thumbs/jumBvHdL-300.jpg",
   stretching: "fill",
   width: 300,
   height: 300,
@@ -47,7 +47,7 @@ jwplayer("player5").setup({
 
 jwplayer("player6").setup({
   file: "//content.jwplatform.com/videos/iLwfYW2S-FctPAkow.mp4",
-  image: "//content.jwplatform.com/thumbs/iLwfYW2S-1280.jpg",
+  image: "//content.jwplatform.com/thumbs/iLwfYW2S-300.jpg",
   stretching: "fill",
   width: 300,
   height: 300,

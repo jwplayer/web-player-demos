@@ -4,8 +4,7 @@ var tag = "assets/preroll.xml"
 
 var playerInstance = jwplayer("myElement");
 playerInstance.setup({
-  file: "//content.jwplatform.com/videos/hWF9vG66-TNpruJId.mp4",
-  image: "//content.jwplatform.com/thumbs/hWF9vG66-480.jpg",
+  playlist: 'https://cdn.jwplayer.com/v2/media/hWF9vG66',
   advertising: {
     client: "vast"
   },

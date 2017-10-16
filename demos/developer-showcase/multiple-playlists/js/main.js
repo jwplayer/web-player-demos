@@ -10,9 +10,6 @@
   var setupPlayer = function(thisFeed) {
     // Initialize the player
     playerInstance = jwplayer('player').setup({
-      aspectratio: '4:3',
-      displaytitle: true,
-      logo: false,
       playlist: thisFeed.playlist,
       visualplaylist: true,
       width: '60%'

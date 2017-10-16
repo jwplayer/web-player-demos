@@ -1,6 +1,5 @@
 jwplayer("player").setup({
-  file: "//content.jwplatform.com/videos/q1fx20VZ-640.mp4",
-  image: "//content.jwplatform.com/thumbs/q1fx20VZ-640.jpg",
+  playlist: 'https://cdn.jwplayer.com/v2/media/q1fx20VZ',
   advertising: {
     client: "vast",
     companiondiv: { id: "adrectangle", height: 250, width: 300 },
