@@ -3,7 +3,7 @@
   "description": "Adds WhatApp to Sharing Overlay as a Custom Site",
   "license": "Free",
   "showCode": true,
-  "layout": "horizontal",
+  "layout": "vertical",
   "apiCalls": [
     ""
   ],
