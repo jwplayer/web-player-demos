@@ -1,0 +1,19 @@
+/* Add your CSS here
+Below are examples for how to customize the player skin
+*/
+
+
+/* Set the global Background color of the player elements */
+.jw-skin-seven .jw-background-color {
+	background: #0e4d8f !important;
+}
+
+/* Changes ONLY the color of the duration text in the controlbar */
+.jw-skin-seven .jw-text-duration {
+	color: rgba(255,255,255,.5) !important;
+}
+
+/* Changes ONLY the color of the buffer bar in the timeslider */
+.jw-skin-seven .jw-buffer {
+	background: rgba(255,255,255,.5) !important; 
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Add Custom Site to Sharing Overlay",
+  "description": "Adds WhatApp to Sharing Overlay as a Custom Site",
+  "license": "Free",
+  "showCode": true,
+  "layout": "horizontal",
+  "apiCalls": [
+    ""
+  ],
+  "author": {
+  	"name": "Alex Bussey",
+  	"githubUsername": "waxidiotic"
+  }
+}
