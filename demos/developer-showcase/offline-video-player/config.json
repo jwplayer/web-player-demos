@@ -1,0 +1,14 @@
+{
+  "title": "Offline Video Player",
+  "description": "Play single videos on your PC.",
+  "license": "All",
+  "showCode": true,
+  "layout": "vertical",
+  "apiCalls": [
+    "load()"
+  ],
+  "author": {
+  	"name": "Patrick Bryan",
+  	"githubUsername": "hgoda90"
+  }
+}
