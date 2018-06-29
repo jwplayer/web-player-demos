@@ -1,13 +1,13 @@
 {
   "title": "Audio Streaming + Metadata",
-  "description": "Extract timed metadata from an audio stream and use it to display information such as title, artist, and poster image.",
-  "license": "Premium",
+  "description": "Extract timed metadata from a live audio stream and use it to display information such as title, artist, and poster image.",
+  "license": "All",
   "showCode": true,
   "apiCalls": [
-	  "on('meta')"
+	  "on('meta')", "on('error')"
   ],
   "author": {
 	"name": "JW Player",
 	"githubUsername": "jwplayer"
-	}  
+	}
 }

@@ -1,108 +1,130 @@
-#player-container {
-  width: 100%;
-  position: relative;
-  height: 400px;
+.player-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-#player {
-  position: absolute;
-  left: 0;
-}
-
-#sidebar {
-  position: absolute;
-  top: 0;
-  right: 0;
+.sidebar {
   width: 360px;
   height: 360px;
   background-color: #475470;
   font-family: Arial, sans-serif;
 }
-#sidebar h3 {
+
+
+@media screen and (max-width: 1080px) {
+  .sidebar {
+    width: 640px;
+    margin-bottom: 20px;
+  }
+}
+
+.sidebar h3 {
   padding: 20px;
   margin: 0;
   font-size: 14px;
   color: #fff;
   text-align: left;
 }
-#searchbox {
-  display: block;
-  position: absolute;
-  right: 20px;
-  top: 15px;
+
+.searchbox {
+   margin: 10px 20px;
+   display: block;
+   position: relative;
 }
-#searchbox input {
-  display: block;
+
+.searchbox input {
   line-height: 20px;
-  font-size: 13px;
+  font-size: 16px;
   color: #000;
-  width: 320px;
+  width: 100%;
   padding: 5px 20px 5px 30px;
-  background: #d9dde6 url('//s3.amazonaws.com/demo.jwplayer.com/interactive-transcript/search.png') no-repeat top left;
+  background: #fff url('//s3.amazonaws.com/demo.jwplayer.com/interactive-transcript/search.png') no-repeat top left;
   border-radius: 3px;
   border: none;
 }
-#searchbox span {
+
+.searchbox .match {
   position: absolute;
   right: 10px;
-  top: 6px;
+  top: 5px;
   line-height: 20px;
-  font-size: 13px;
+  font-size: 14px;
   color: #000;
 }
-#transcript {
-  height: 280px;
+
+.transcript {
+  padding: 20px;
+  max-height: 80%;
   overflow: auto;
-  padding: 0 20px;
-  margin-top: 60px;
 }
-#transcript p {
-  margin: 0 0 10px 0;
-  width: auto;
-  text-align: left;
+
+.transcript p {
   font-size: 15px;
+  overflow: hidden;
+  text-align: left;
   color: #fff;
   line-height: 20px;
 }
-#transcript span {
+
+.transcript span {
   display: inline;
   padding: 4px 2px;
   line-height: 24px;
   cursor: pointer;
   color: #fff;
 }
-#transcript span.current {
+
+.transcript span.current {
   background: #00f096;
   color: #000;
 }
-#transcript span:hover {
+
+.transcript span:hover {
   color: #00f096;
 }
-#transcript span em {
+
+.transcript span em {
   font-style: normal;
   background: #666;
   color: #FFF;
 }
-#transcript span em.current {
+
+.transcript span em.current {
   background: #ff0046;
 }
 
-#transcript h4 {
-  margin: 0 0 5px 0;
+.transcript h4 {
+  margin: 25px 0 15px 0;
   text-align: left;
   color: #fff;
   font-weight: bold;
 }
 
-ol {
-  width: 75%;
-  margin: 0 auto;
-  padding: 20px 0;
-  font-weight: 400;
-}
-
-ol li {
+.caption-copy {
+  max-width: 640px;
+  margin: 20px auto;
   text-align: left;
-  padding: 10px 0;
+  padding: 10px;
 }
 
+.caption-copy div,
+.caption-copy ol,
+.caption-copy li {
+  text-align: left;
+  font-size: 20px;
+}
+
+.caption-copy div {
+  font-weight: 400;
+  margin: 15px 0;
+}
+
+.caption-copy ol {
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+.caption-copy li {
+  margin-bottom: 10px;
+}

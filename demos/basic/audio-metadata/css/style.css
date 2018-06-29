@@ -3,7 +3,35 @@
 	color: #00C669;
 }
 
+.metadata-info,
+.note {
+	text-align: left;
+	font-size: 20px;
+}
+
+.header {
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.data {
+	font-weight: 300;
+	margin-left: 7px;
+	text-transform: none;
+}
+
+.note {
+	margin-top: 20px;
+	font-style: italic;
+}
+
 .audio-img {
-	height: 300px;
-	width:300px;
+	height: auto;
+	width: 480px;
+}
+
+@media screen and (max-width: 600px) {
+	.audio-img {
+		width: 100%;
+	}
 }

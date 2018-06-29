@@ -1,7 +1,6 @@
 var playerInstance = jwplayer("myElement");
 playerInstance.setup({
-"file":"//content.jwplatform.com/videos/ioyt59Zj-TNpruJId.mp4", 
-"image":"//content.jwplatform.com/thumbs/ioyt59Zj-480.jpg", 
+"playlist": 'https://cdn.jwplayer.com/v2/media/ioyt59Zj',
 "title": "Elephant's Dream",
 "width": 567,
 "height": 318,

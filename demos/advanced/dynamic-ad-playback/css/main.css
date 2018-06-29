@@ -1,27 +1,21 @@
-#adplayer {
-    padding: 0;
-    display: inline-flex;
-  }
-#adrectangle {
-    width: 300px;
-    height: 250px;
-    background-image: url('../assets/sintel.jpg');
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
-    margin-left: 30px;
-  }
+.message {
+  font-size: 22px;
+  font-weight: 400;
+  color: #000;
+}
 
-#timeline {
-    position: relative;
-    margin: 0 auto;
-    padding-bottom: 30px;
-  }
+.message.button {
+  background-color: #0B7EF4;
+  color: #fff;
+  text-transform: none;
+}
 
-#highlight {
-    transition: width 0.25s;
-    position: absolute;
-    left: 40px;
-    top: 0;
-    height: 50px;
-    width: 0;
-    background: transparent url('../assets/highlight.png') 0 0 no-repeat;
-  }
+.message.button:hover {
+  background-color: #0F4E90;
+}
+
+.arrow {
+  width: 12px;
+  height: 12px;
+  margin-left: 10px;
+}

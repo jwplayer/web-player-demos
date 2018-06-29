@@ -1,0 +1,14 @@
+{
+  "title": "Freewheel Advertising",
+  "description": "Using FreeWheel as your ad manager allows for leveraging the control FreeWheel's platform provides.",
+  "license": "Enterprise",
+  "showCode": true,
+  "layout": "vertical",
+  "apiCalls": [
+    ""
+  ],
+  "author": {
+  	"name": "Alex Bussey",
+  	"githubUsername": "waxidiotic"
+  }
+}

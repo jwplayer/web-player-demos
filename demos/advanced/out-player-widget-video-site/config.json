@@ -1,0 +1,16 @@
+{
+	"title": "Out-Player Widget on a Single Page Video Site",
+	"description": "Build a single page video site using this JavaScript-based widget to embed multiple JW Platform-hosted video feeds.",
+	"license": "All",
+	"showCode": false,
+	"apiCalls": [
+		".load()",
+		".getViewable()",
+		".on('playlistItem')",
+		".play()"
+	],
+	"author": {
+		"name": "JW Player",
+		"githubUsername": "jwplayer"
+	}
+}

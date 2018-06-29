@@ -1,0 +1,37 @@
+{
+  "widgets": [
+  {
+    "widgetDivId": "jw-widget-demo-spotlight",
+    "playlist": "//cdn.jwplayer.com/v2/playlists/tQv85ru3?related_media_id=8TbJTFy5",
+    "videoPlayerId": "widget-video-player",
+    "header": "New & Noteworthy",
+    "textColor": "#fff",
+    "backgroundColor": "rgba(71,84,112,.25)",
+    "iconColor": "#fff",
+    "widgetLayout": "spotlight",
+    "widgetSize": "large"
+  },
+  {
+    "widgetDivId": "jw-widget-demo-shelf",
+    "playlist": "//cdn.jwplayer.com/v2/playlists/oR7ahO0J",
+    "videoPlayerId": "widget-video-player",
+    "header": "Action & Adventure",
+    "textColor": "#fff",
+    "backgroundColor": "rgba(71,84,112,.25)",
+    "iconColor": "#fff",
+    "widgetLayout": "shelf",
+    "widgetSize": "large"
+  },
+  {
+    "widgetDivId": "jw-widget-demo-shelf-2",
+    "playlist": "//cdn.jwplayer.com/v2/playlists/lrYLc95e",
+    "videoPlayerId": "widget-video-player",
+    "header": "Drama",
+    "textColor": "#fff",
+    "backgroundColor": "rgba(71,84,112,.25)",
+    "iconColor": "#fff",
+    "widgetLayout": "shelf",
+    "widgetSize": "large"
+  }
+  ]
+}

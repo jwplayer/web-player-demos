@@ -1,0 +1,12 @@
+{
+	"title": "Sharing Playbar on Scroll",
+	"description": "Pause playback when the player is out of view and allow viewers to control playback or share the page via an external playbar on scroll.",
+	"license": "All",
+	"showCode": true,
+	"apiCalls": [ "play()", "on('play')", "on('pause')", "on('complete')", "on('playlistItem')" ],
+	"layout": "vertical",
+	"author": {
+		"name": "Joshua Hatcher",
+		"githubUsername": "joshuahatcher"
+	}
+}

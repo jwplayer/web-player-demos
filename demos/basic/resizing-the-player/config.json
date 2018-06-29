@@ -1,7 +1,7 @@
 {
 	"title": "Resizing the Player",
 	"description": "A demo setup of JW Player with an external link that resizes the player on the fly.",
-	"license": "Free",
+	"license": "All",
     "showCode": true,
 	"apiCalls": [
 		"getWidth()", "resize()"

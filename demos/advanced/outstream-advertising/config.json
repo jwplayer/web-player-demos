@@ -1,7 +1,7 @@
 {
 	"title": "Outstream Advertising",
 	"description": "Trigger an in-read ad to autoplay once it comes into view and collapse the video player after ad completion.",
-	"license": "Ads",
+	"license": "Enterprise",
 	"showCode": true,
   	"layout": "vertical",
 	"apiCalls": [

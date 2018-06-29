@@ -4,7 +4,7 @@ jwplayer('player').setup({
     title:"Sintel",
     description:"This is a DASH stream!",
     type:"dash"
-}],
-    dash: 'shaka',
-    autostart: true
+	}],
+	dash: 'shaka',
+	autostart: true
 });

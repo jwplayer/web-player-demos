@@ -1,0 +1,121 @@
+.header {
+	width: 100%;
+	text-align: left;
+}
+
+h2 {
+	font-family: 'Lato', sans-serif;
+	color: #000;
+	font-size: 36px;
+	font-weight: 900;
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+h3 {
+	text-align: left;
+	color: #475470;
+	margin: 5px 0 30px 0;
+	text-transform: uppercase;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+h3 strong {
+	font-weight: 700;
+}
+
+.twitter-share-button {
+	margin-left: 10px;
+}
+
+.demo-container p {
+	text-align: left;
+	margin-bottom: 30px;
+	font-family: Georgia, serif;
+	font-size: 17px;
+	line-height: 25px;
+}
+
+.demo-container p span {
+	font-size: 42px;
+	font-weight: 600;
+	padding-right: 5px;
+}
+
+.demo-container p.intro::first-letter{
+	font-size: 300%;
+	padding-right: 5px;
+	vertical-align: baseline;
+}
+
+.demo-container .flex-wrap {
+	display: flex;
+}
+
+.jw-widget {
+	text-align: left;
+	font-family: 'Lato', sans-serif;
+	font-weight: 900;
+}
+
+#ads-video-player {
+	min-width: 320px;
+	display: inline-block;
+	margin-left: 20px;
+}
+
+@media (max-width: 480px) {
+	#ads-video-player {
+		display: block;
+		margin: 0 0 20px 0;
+	}
+	.demo-container .flex-wrap {
+		display: block;
+	}
+
+}
+
+section {
+	margin: 40px 0;
+}
+
+.promo {
+	padding: 20px;
+	border-radius: 6px;
+	text-align: left;
+	background: -moz-linear-gradient(45deg, rgba(255,70,100,1) 0%, rgba(255,182,0,1) 100%);
+	background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(255,70,100,1)), color-stop(100%, rgba(255,182,0,1)));
+	background: -webkit-linear-gradient(45deg, rgba(255,70,100,1) 0%, rgba(255,182,0,1) 100%);
+	background: -o-linear-gradient(45deg, rgba(255,70,100,1) 0%, rgba(255,182,0,1) 100%);
+	background: -ms-linear-gradient(45deg, rgba(255,70,100,1) 0%, rgba(255,182,0,1) 100%);
+	background: linear-gradient(45deg, rgba(255,70,100,1) 0%, rgba(255,182,0,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4664', endColorstr='#ffb600', GradientType=1 );
+}
+
+.promo:hover {
+	text-decoration: none;
+}
+
+.promo img {
+	width: 30px;
+	position: relative;
+	top: 8px;
+	opacity: .85;
+}
+
+.promo:hover img {
+	opacity: 1;
+}
+
+.promo h2 {
+	color: #fff;
+	display: inline;
+	font-weight: 700;
+	font-size: 17px;
+	text-align: left;
+	margin-left: 5px;
+}

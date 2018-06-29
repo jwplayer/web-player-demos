@@ -1,7 +1,7 @@
 {
   "title": "Loading New Playlists",
   "description": "Click on a button to choose a playlist and load it into the player!",
-  "license": "Free",
+  "license": "All",
   "showCode": true,
   "layout": "horizontal",
   "apiCalls": [

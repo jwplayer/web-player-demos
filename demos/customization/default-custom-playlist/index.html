@@ -1,0 +1,48 @@
+<script src="https://content.jwplatform.com/libraries/IDzF9Zmk.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+
+<button
+  class="button button-sm button-theme-brand-2 button-toggle button-toggle-on"
+  data-toggle="in">
+    Playlist Overlay
+</button>
+<button
+  class="button button-sm button-theme-brand-2 button-toggle"
+  data-toggle="out">
+    Playlist Shelf
+</button>
+
+<div class="player-demo-wrapper demo-toggle-on" id="in-player">
+  <div id="in-player-demo"></div>
+</div>
+
+<div class="player-demo-wrapper" id="out-player">
+  <div class="player">
+    <div id="out-player-demo"></div>
+  </div>
+  <div id="player-playlist" class="playlist-wrapper"></div>
+</div>
+
+<template id="out-player-playlist-template">
+  <p>Coming Up</p>
+  <ul class="playlist">
+    {{#each playlist}}
+    <li class="playlist-item">
+        <a
+          class="playlist-item-link{{#if @first}} active{{/if}}"
+          href="{{link}}"
+          data-mediaid="{{mediaid}}"
+        >
+          <div class="playlist-thumbnail-wrapper">
+            <span class="playlist-duration">00:{{duration}}</span>
+            <div class="playlist-item-playing">Now Playing</div>
+            <img class="playlist-thumbnail" src="{{image}}" />
+          </div>
+          <p>{{title}}</p>
+        </a>
+    </li>
+    {{/each}}
+  </ul>
+</template>
+
+<script src="toggle.js"></script>

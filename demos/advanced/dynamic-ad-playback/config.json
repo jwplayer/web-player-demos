@@ -1,13 +1,13 @@
 {
 	"title": "Dynamic Ad Playback",
-	"description": "Trigger an ad to play at any point during a piece of content",
-	"license": "Ads",
+	"description": "Trigger an ad to play at a selected point during a video.",
+	"license": "Enterprise",
 	"showCode": true,
 	"apiCalls": [
-		"on('play')", "on('pause')", "on('idle')", "playAd(tag)"
+		"on('play')", "on('pause')", "on('complete')", "playAd(tag)", "on('adComplete')", "on('adSkipped')", "on('adPlay')", "on('adPause')"
 	],
 	"author": {
-		"name": "JW Player",
-		"githubUsername": "jwplayer"
+		"name": "Kim Hart",
+		"githubUsername": "kimhart"
 	}
 }

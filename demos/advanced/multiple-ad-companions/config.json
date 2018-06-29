@@ -1,7 +1,7 @@
 {
   "title": "Multiple Ad Companions",
   "description": "Use on('adCompanions') to display multiple companion ads from your VAST file",
-  "license": "Ads",
+  "license": "Enterprise",
   "showCode": false,
   "layout": "vertical",
   "apiCalls": [

@@ -1,0 +1,41 @@
+#log-container {
+  margin-bottom: 20px;
+  background-color: #242a38;
+  color: #D9DDE6;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+#log-container div {
+  display: flex;
+  text-align: left;
+  align-items: flex-start;
+  font-size: 16px;
+  max-width: 100%;
+  white-space: normal;
+}
+
+#log-container div:nth-of-type(2) {
+  margin-top: 20px;
+}
+
+.version-toggles {
+  margin: 0 auto 30px auto;
+}
+
+.version-toggles input {
+  margin-right: 8px;
+}
+
+.version-toggles label {
+  color: black;
+  font-size: 22px;
+  margin-right: 30px;
+}
+
+
+@media screen and (max-width: 425px) {
+  #log-container div {
+    font-size: 14px;
+  }
+}

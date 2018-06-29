@@ -1,7 +1,7 @@
 {
 	"title": "Ad Event Verification",
 	"description": "Use JW Player's API to detect and verify when advertising events occur.",
-	"license": "Ads",
+	"license": "Enterprise",
 	"showCode": true,
 	"apiCalls": [
 		"on('adImpression')", "on('adClick')", "on('adComplete')", "on('adTime')", "on('adSkipped')"

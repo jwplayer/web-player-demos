@@ -1,8 +1,7 @@
 var player = jwplayer('player');
 
 player.setup({
-  file: "//content.jwplatform.com/videos/xJ7Wcodt-cIp6U8lV.mp4",
-  image: "//content.jwplatform.com/thumbs/xJ7Wcodt-720.jpg"
+  playlist: 'https://cdn.jwplayer.com/v2/media/8L4m9FJB'
 });
 
 player.addButton(

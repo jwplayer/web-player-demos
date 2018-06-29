@@ -1,8 +1,8 @@
 var r = Math.random();
 
 jwplayer("player1").setup({
-  file: "//content.jwplatform.com/videos/1b02B03R-TNpruJId.mp4",
-  image: "//content.jwplatform.com/thumbs/1b02B03R-480.jpg",
+  file: "//content.jwplatform.com/videos/i3q4gcBi-FctPAkow.mp4",
+  image: "//content.jwplatform.com/thumbs/i3q4gcBi-300.jpg",
   stretching: "fill",
   width: 300,
   height: 300,
@@ -10,8 +10,8 @@ jwplayer("player1").setup({
 });
 
 jwplayer("player2").setup({
-  file: "//content.jwplatform.com/videos/QlfSn2u6-TNpruJId.mp4",
-  image: "//content.jwplatform.com/thumbs/QlfSn2u6-480.jpg",
+  file: "//content.jwplatform.com/videos/tkM1zvBq-FctPAkow.mp4",
+  image: "//content.jwplatform.com/thumbs/tkM1zvBq-300.jpg",
   stretching: "fill",
   width: 300,
   height: 300,
@@ -19,8 +19,8 @@ jwplayer("player2").setup({
 });
 
 jwplayer("player3").setup({
-  file: "//content.jwplatform.com/videos/0jfSz4yx-TNpruJId.mp4",
-  image: "//content.jwplatform.com/thumbs/0jfSz4yx-480.jpg",
+  file: "//content.jwplatform.com/videos/RDn7eg0o-FctPAkow.mp4",
+  image: "//content.jwplatform.com/thumbs/RDn7eg0o-300.jpg",
   stretching: "fill",
   width: 300,
   height: 300,
@@ -28,8 +28,8 @@ jwplayer("player3").setup({
 });
 
 jwplayer("player4").setup({
-  file: "//content.jwplatform.com/videos/JzT9Zodn-TNpruJId.mp4",
-  image: "//content.jwplatform.com/thumbs/JzT9Zodn-480.jpg",
+  file: "//content.jwplatform.com/videos/7CWdQFCL-FctPAkow.mp4",
+  image: "//content.jwplatform.com/thumbs/7CWdQFCL-300.jpg",
   stretching: "fill",
   width: 300,
   height: 300,
@@ -37,8 +37,8 @@ jwplayer("player4").setup({
 });
 
 jwplayer("player5").setup({
-  file: "//content.jwplatform.com/videos/z0nRtVrT-TNpruJId.mp4",
-  image: "//content.jwplatform.com/thumbs/z0nRtVrT-480.jpg",
+  file: "//content.jwplatform.com/videos/jumBvHdL-FctPAkow.mp4",
+  image: "//content.jwplatform.com/thumbs/jumBvHdL-300.jpg",
   stretching: "fill",
   width: 300,
   height: 300,
@@ -46,8 +46,8 @@ jwplayer("player5").setup({
 });
 
 jwplayer("player6").setup({
-  file: "//content.jwplatform.com/videos/7INZ03ai-TNpruJId.mp4",
-  image: "//content.jwplatform.com/thumbs/7INZ03ai-480.jpg",
+  file: "//content.jwplatform.com/videos/iLwfYW2S-FctPAkow.mp4",
+  image: "//content.jwplatform.com/thumbs/iLwfYW2S-300.jpg",
   stretching: "fill",
   width: 300,
   height: 300,

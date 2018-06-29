@@ -1,7 +1,7 @@
 {
   "title": "Peer-Accelerated Delivery",
   "description": "A visualization of Streamroot's hybrid HTTP-P2P streaming integrated with JW Player in HTML5.",
-  "license": "Free",
+  "license": "All",
   "showCode": false,
   "apiCalls": ["registerProvider()"],
   "author": {

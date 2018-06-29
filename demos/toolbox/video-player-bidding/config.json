@@ -1,0 +1,14 @@
+{
+	"title": "Video Player Bidding",
+	"description": "All the benefits of Header Bidding are now built directly into your JW Player. With a simple one-click integration, you get access to quality advertising demand at scale with reduced latency.",
+	"license": "Enterprise",
+	"showCode": false,
+    "layout": "vertical",
+ 	"apiCalls": [
+		"on('adImpression')", "on('adBidRequest')", "on('adBidResponse')"
+	],
+	"author": {
+		"name": "Ian Boynton",
+		"githubUsername": "boyntoni"
+	}
+}

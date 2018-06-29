@@ -1,0 +1,12 @@
+{
+	"title": "Default vs. Custom Playlist Displays",
+	"description": "Display JW Player’s default in-player playlist overlay using the setup config or implement a custom out-player playlist shelf using the Javascript API.",
+	"license": "All",
+	"showCode": true,
+  "apiCalls": ["on('playlistItem')", "playlistItem()", "getPlaylist()"],
+	"layout": "vertical",
+	"author": {
+		"name": "Joshua Hatcher",
+		"githubUsername": "joshuahatcher"
+	}
+}

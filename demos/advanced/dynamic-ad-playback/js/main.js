@@ -1,32 +1,54 @@
-var btn = document.getElementById("playbutton");
-var ply = false;
-var tag = "assets/preroll.xml"
+  var message = document.querySelector('.message');
+  var tag = 'assets/preroll.xml';
+  var player = jwplayer('player');
 
-var playerInstance = jwplayer("myElement");
-playerInstance.setup({
-  file: "//content.jwplatform.com/videos/hWF9vG66-TNpruJId.mp4",
-  image: "//content.jwplatform.com/thumbs/hWF9vG66-480.jpg",
-  advertising: {
-    client: "vast"
-  },
-});
+  player.setup({
+    playlist: '//cdn.jwplayer.com/v2/media/hWF9vG66',
+    advertising: {
+      client: 'vast'
+    }
+  });
 
-playerInstance.on('play',function() {
-  ply = true;
-  btn.innerHTML = "<a href='javascript:playMyAd()'>Play an Ad!</a>";
-});
-playerInstance.on('pause',function() {
-  ply = false;
-  btn.innerHTML = "Please unpause video to play an ad!";
-});
-playerInstance.on('idle',function() {
-  ply = false;
-  btn.innerHTML = "Player idle. Please restart playback.";
-});
-function playMyAd() {
-  if(ply) {
-    playerInstance.playAd(tag);
-    ply = false;
-    btn.innerHTML = "Ad Playing! Please wait...";
-   }
-};
+  player.on('play',function() {
+    showButton();
+  });
+
+  player.on('pause',function() {
+    hideButton('Unpause the video to continue.');
+  });
+
+  player.on('complete', function() {
+    hideButton('Restart video to continue.');
+  });
+
+  player.on('adPlay', function() {
+    hideButton('Ad playing, please wait (or skip it)')
+  });
+
+  player.on('adPause', function() {
+    hideButton('Unpause the ad to continue.')
+  });
+
+  player.on('adSkipped', function() {
+    showButton();
+  });
+
+  player.on('adComplete', function() {
+    showButton();
+  });
+
+  function triggerAd() {
+    player.playAd(tag);
+  };
+
+  function showButton() {
+    message.innerHTML = 'Play an Ad';
+    message.classList.add('button');
+    message.addEventListener('click', triggerAd);
+  };
+
+  function hideButton(messageText) {
+    message.innerHTML = messageText;
+    message.classList.remove('button');
+    message.removeEventListener('click', triggerAd);
+  };

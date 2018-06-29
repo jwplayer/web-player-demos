@@ -1,0 +1,34 @@
+/* Add your CSS here
+Below are examples for how to customize the player skin
+*/
+
+.player-options {
+	display: flex;
+	max-width: 480px;
+	margin: 0 auto 35px;
+	justify-content: space-around;
+}
+
+.player-options label {
+	color: black;
+}
+
+.explanation {
+	background-color: #475470;
+	max-width: 480px;
+	margin: 0 auto 35px;
+	padding: 10px;
+	color: white;
+}
+
+.explanation > span {
+	font-weight: bold;
+}
+
+#setupPlayerButton {
+	cursor: pointer;
+}
+
+.ad-rules-link {
+	margin-top: 35px;
+}

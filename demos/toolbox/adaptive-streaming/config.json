@@ -1,7 +1,7 @@
 {
 	"title": "Adaptive Streaming",
 	"description": "This demo shows JW Player loading fragments by comparing your bandwidth to the available video bitrates.",
-	"license": "Premium",
+	"license": "All",
 	"showCode" : false,
 	"apiCalls": [
 		"on('ready')", "getProvider()", "remove()", "on('playlist')", "on('levels')", "on('meta')", "on('time')", "on('seek')", "on('complete')"

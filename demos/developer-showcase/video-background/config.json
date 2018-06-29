@@ -1,7 +1,7 @@
 {
   "title": "Video Background",
   "description": "Use JW Player to display a video as a background.",
-  "license": "Free",
+  "license": "All",
   "showCode": true,
   "layout": "vertical",
   "apiCalls": [

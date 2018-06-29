@@ -1,0 +1,12 @@
+{
+	"title": "Custom UI for JW8",
+	"description": "How to modify the JW8 player CSS with custom fonts, an inline timeslider, and branded colors in the control bar & settings menu.",
+	"license": "All",
+	"showCode": true,
+  "apiCalls": [],
+	"layout": "vertical",
+	"author": {
+		"name": "Kim Hart",
+		"githubUsername": "kimhart"
+	}
+}

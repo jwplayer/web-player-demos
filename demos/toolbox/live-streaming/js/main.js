@@ -4,21 +4,7 @@ jwplayer('container').setup ({
 
 function loadMPD(a) {
     var o = {
-      type: 'hls',
-      autostart: a,
-      width: 640,
-      height: 360,
-              hlslabels: {
-            "415": "128p",
-            "515": "160p",
-            "650": "208p",
-            "881":"252p",
-            "1200":"332p",
-            "1600": "432p",
-            "2300": "560p",
-            "3200":"720p"
-        }
-    };
+      };
     var f = document.querySelector("input").value;
     if(f) o.file = f;
     jwplayer('container').setup(o);

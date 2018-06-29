@@ -1,0 +1,65 @@
+/* Ensure that the player uses all available width */
+.container .demo-layout-vertical .demo-layout-content {
+	max-width: 100%;
+	min-width: 0;
+}
+
+.instructions h3 {
+	font-size: 17px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.instructions h4 {
+	font-size: 13px;
+	font-weight: 500;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+.steps {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #ccc;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.setup-steps {
+	display: flex;
+	flex-direction: column;
+	min-width: 25%;
+	text-align: center;
+}
+
+@media (max-width: 640px) {
+	.steps {
+		flex-direction: column;
+	}
+}
+
+#dfp {
+	display: block;
+}
+
+#jwp {
+	display: none;
+}
+
+#mediationLayerSelect {
+	text-align: center;
+}
+
+.pageDescription {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#title {
+	font-size: 30px;
+	font-weight: bold;
+}

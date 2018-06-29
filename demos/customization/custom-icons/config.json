@@ -1,0 +1,10 @@
+{
+  "title": "Custom Icons",
+  "description": "This demo shows how to replace the player's default control icons with your own.",
+  "license": "All",
+  	"showCode": false,
+	"author": {
+		"name": "JW Player",
+		"githubUsername": "jwplayer"
+	}
+}

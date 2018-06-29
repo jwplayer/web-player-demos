@@ -1,0 +1,35 @@
+<script src="//content.jwplatform.com/libraries/VFQcaWfi.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+
+<p>This demo uses an array of feed IDs to generate a tabbed playlist view. After all feeds are fetched with the JW Platform Delivery API, the view is created using a Handlebars.js template and the player is initialized with the first playlist. Context is maintained between the view and the player, even when individual videos are present in more than one playlist.</p>
+
+<hr>
+
+<div class="overflow-wrapper">
+	<div class="demo-wrapper">
+		<div id="player"></div>
+		<div id="js-playlists" class="playlists"></div>
+	</div>
+</div>
+
+<template id="js-playlist-template">
+	<div class="playlist-switcher">
+	{{#each this}}
+		<a class="js-playlist-link playlist-link{{#if @first}} is-active{{/if}}" href="#" data-feedid="{{feedid}}">{{title}}</a>
+	{{/each}}
+	</div>
+	{{#each this}}
+	<div class="js-playlist playlist-container{{#if @first}} is-active{{/if}}" data-feedid="{{feedid}}">
+		<ul class="playlist">
+		{{#each playlist}}
+			<li>
+				<a class="js-video-link playlist-item" href="{{link}}" data-mediaid="{{mediaid}}">
+					<img src="{{image}}" alt="{{title}}">
+					<span>{{title}}</span>
+				</a>
+			</li>
+		{{/each}}
+		</ul>
+	</div>
+	{{/each}}
+</template>

@@ -14,12 +14,48 @@
 * governing permissions and limitations under the License.
 -->
 
-<script src='testing-utils.js'></script>
-<script src='//content.jwplatform.com/libraries/z3exF2NE.js'></script>
-
-
+<div class="version-toggles">
+  <label for="7"><input id="7" class="version-toggle" name="version-toggle" type="radio" value="7" />JW Player 7</label>
+  <label for="8"><input id="8" class="version-toggle" name="version-toggle" type="radio" value="8" />JW Player 8</label>
+</div>
 <div id="container"></div>
-<br>
 <p>This demo outputs Player setup time on page load. Press play to see how long it takes to reach the first frame of video.</p>
-
 <p>The JW Player JavaScript API can be used to integrate with third party QoE systems. See our <a href="//developer.jwplayer.com/jw-player/docs/developer-guide/api/javascript_api_reference/">JavaScript API Reference</a> for all available QoE/QoS events.</p>
+
+<script src='testing-utils.js'></script>
+<script type="text/javascript">
+
+  function onLoad() {
+    var libraryRadios = document.querySelectorAll('.version-toggle');
+    var playerVersion = window.location.search ?
+      window.location.search.split("playerversion=")[1] :
+      '8';
+
+    libraryRadios.forEach(function(radio) {
+      radio.addEventListener('click', switchPlayerLibrary);
+      radio.checked = radio.value === playerVersion;
+    });
+
+    setLibraryScript(playerVersion);
+  };
+
+  function setLibraryScript(playerVersion) {
+    var playerLibraries = {
+      7: 'https://content.jwplatform.com/libraries/z3exF2NE.js',
+      8: 'https://content.jwplatform.com/libraries/Jq6HIbgz.js'
+    };
+    var script = document.createElement('script');
+
+    script.src = playerLibraries[playerVersion];
+    document.body.appendChild(script);
+  };
+
+  function switchPlayerLibrary(e) {
+    var version = e.target.value;
+
+    window.location.search = 'playerversion=' + version;
+  };
+
+  onLoad();
+
+</script>

@@ -1,8 +1,17 @@
 <script type="text/javascript">{{{js}}}</script>
 <script type="text/javascript">
-if (jwplayer().id) {
-	jwplayer().on('ready', function() {
-		document.getElementById('demo-player-version').innerHTML = jwplayer.version.split('+')[0];
-	});
-}
+  function setVersion() {
+    if (typeof jwplayer === 'undefined') {
+      setTimeout(setVersion, 100);
+      return;
+    }
+
+    if (jwplayer && jwplayer().id) {
+      jwplayer().on('ready', function() {
+        document.getElementById('demo-player-version').innerHTML = jwplayer.version.split('+')[0];
+      });
+    }
+  }
+
+  setVersion();
 </script>

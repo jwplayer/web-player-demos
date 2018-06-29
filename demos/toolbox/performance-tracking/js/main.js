@@ -1,28 +1,31 @@
-var logs = jwTest.makeLogger('container');
+function init() {
+  var player, logs;
 
-function prettify(q, event) {
-    if (!q.item.counts[event] && !q.item.sums[event]) {
-        return event + ' (undefined)';
-    }
-    return event + ' ('+q.item.counts[event]+') ' + q.item.sums[event];
-}
+  // For demo purposes
+  if (typeof jwplayer === 'undefined') {
+    setTimeout(init, 100);
+    return;
+  }
 
-var player = jwplayer('container');
+  player = jwplayer('container');
+  logs = jwTest.makeLogger('container');
 
-player.setup({
+  player.setup({
     displaytitle: false,
     preload:'metadata',
-    file: '//content.jwplatform.com/videos/xJ7Wcodt-FctPAkow.mp4',
-    image:'//content.jwplatform.com/thumbs/xJ7Wcodt-1280.jpg'
-});
+    file: '//content.jwplatform.com/videos/i3q4gcBi.mp4',
+    image:'//content.jwplatform.com/thumbs/i3q4gcBi.jpg'
+  });
 
-player.on('ready', function(){
+  player.on('ready', function() {
     var qoe = this.qoe();
-    logs.log('The player setup in:', JSON.stringify(qoe.setupTime),'ms');
+    logs.log('The player set up in', JSON.stringify(qoe.setupTime),'ms.');
+  });
 
-});
-
-player.on('firstFrame', function(){
+  player.on('firstFrame', function() {
     var qoe = this.qoe();
     logs.log('The player took', JSON.stringify(qoe.firstFrame),'ms to get to the first frame of video.');
-});
+  });
+}
+
+init();

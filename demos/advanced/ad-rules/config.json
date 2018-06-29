@@ -1,0 +1,14 @@
+{
+  "title": "Ad Rules",
+  "description": "Ad rules allow publishers to customize when ads get served to their viewers.",
+  "license": "Enterprise",
+  "showCode": false,
+  "layout": "horizontal",
+  "apiCalls": [
+    ""
+  ],
+  "author": {
+  	"name": "Alex Bussey",
+  	"githubUsername": "waxidiotic"
+  }
+}

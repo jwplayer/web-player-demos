@@ -1,7 +1,7 @@
 {
 	"title": "Hot Spots",
 	"description": "This demo uses hyperlink icons to navigate to additional information or another point in the video.",
-	"license": "Free",
+	"license": "All",
 	"showCode": false,
 	"apiCalls": [
 		"addButton()", "on('ready')", "on('time')", "on('seek')", "seek()"

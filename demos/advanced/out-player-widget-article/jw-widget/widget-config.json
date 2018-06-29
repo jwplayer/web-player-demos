@@ -1,0 +1,15 @@
+{
+  "widgets": [
+  {
+    "widgetDivId": "jw-widget-demo-shelf",
+    "playlist": "//cdn.jwplayer.com/v2/playlists/tQv85ru3?related_media_id=RDn7eg0o",
+    "videoPlayerId": "widget-video-player",
+    "header": "Recommended Videos",
+    "textColor": "#475470",
+    "backgroundColor": "rgba(217, 221, 230,.6)",
+    "iconColor": "#fff",
+    "widgetLayout": "shelf",
+    "widgetSize": "large"
+  }
+  ]
+}

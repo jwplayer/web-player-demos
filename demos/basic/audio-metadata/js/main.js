@@ -1,20 +1,31 @@
-var titleHTML = document.getElementById('title');
-var artistHTML = document.getElementById('artist');
-var imageHTML = document.getElementById('image');
+  var titleDiv = document.getElementById('title');
+  var artistDiv = document.getElementById('artist');
+  var imageDiv = document.getElementById('image');
+  var player = jwplayer('player');
 
-jwplayer().on('meta', function(event){
-	var thisTitle = event.metadata.title;
-	var thisArtist = event.metadata.artist;
-	var thisImage = event.metadata.url;
-	console.log(event.metadata)
+  // Set up the player with an HLS stream that includes timed metadata
+  player.setup({
+    file: 'assets/index.m3u8'
+  });
 
-	if(thisTitle){
-	titleHTML.innerHTML= thisTitle;
-	}
-	if(thisArtist){
-	artistHTML.innerHTML= thisArtist;
-	}
-	if(thisImage){
-	imageHTML.innerHTML= '<img src="'+thisImage+'"/>';
-	}
-});
+  // Retrieve metadata
+  player.on('meta', function(e) {
+    if (e.metadata) {
+      var title = e.metadata.title;
+      var artist = e.metadata.artist;
+      var imageUrl = e.metadata.url;
+
+      title ? titleDiv.innerHTML = title : titleDiv.innerHTML = 'Unknown';
+      artist ? artistDiv.innerHTML = artist : artistDiv.innerHTML = 'Unknown';
+      imageUrl ? imageDiv.src = imageUrl : imageDiv.src = 'assets/jwlogo.png';
+    };
+  });
+
+  // Handle reset of player at end of content
+  player.on('error', function(e) {
+    if (e.message === 'The live stream is either down or has ended') {
+      player.load({
+        file: 'assets/index.m3u8'
+      });
+    }
+  });

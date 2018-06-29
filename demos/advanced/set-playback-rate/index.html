@@ -1,0 +1,43 @@
+<script src="https://content.jwplatform.com/libraries/IDzF9Zmk.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+
+<button
+  class="button button-sm button-theme-brand-2 button-toggle button-toggle-on"
+  data-toggle="user">
+  User controlled
+</button>
+<button
+  class="button button-sm button-theme-brand-2 button-toggle"
+  data-toggle="publisher">
+  Publisher curated
+</button>
+
+<div class="player-wrapper demo-toggle-on" id="user-wrapper">
+  <div id="user-player"></div>
+  <div>
+    Toggle playback speed by clicking on the settings gear in the control bar and selecting a new speed under the clock icon. Here we set custom speeds, but you can also use default ones.
+  </div>
+</div>
+
+<div class="player-wrapper" id="publisher-wrapper">
+    <div class="publisher-player-container">
+    <div class="publisher-player-overlay">
+      <div class="publisher-player-time">00:00</div>
+      <div class="publisher-player-replay-copy">Slow-mo Replay</div>
+      <div class="custom-controls custom-play-controls">
+        <button class="custom-controls-btn play-btn"></button>
+        <button class="custom-controls-btn pause-btn"></button>
+      </div>
+      <div class="custom-controls custom-mute-controls">
+        <button class="custom-controls-btn mute-btn"></button>
+        <button class="custom-controls-btn unmute-btn"></button>
+      </div>
+    </div>
+    <div id="publisher-player"></div>
+  </div>
+  <div>
+    Use our API to create slow motion video playback without editing the original media. At 0:19, it seeks back to the beginning of an awesome move on the half-pipe, plays it back at 0.5x, and then continues playing at 1x after.
+  </div>
+</div>
+
+<script src="toggle.js"></script>

@@ -1,0 +1,16 @@
+{
+	"title": "Out-Player Widget on an Article",
+	"description": "Embed a feed of JW Platform-hosted videos on an article to drive user engagement using this JavaScript-based widget.",
+	"license": "All",
+	"showCode": false,
+	"apiCalls": [
+		".load()",
+		".getViewable()",
+		".on('playlistItem')",
+		".play()"
+	],
+	"author": {
+		"name": "JW Player",
+		"githubUsername": "jwplayer"
+	}
+}

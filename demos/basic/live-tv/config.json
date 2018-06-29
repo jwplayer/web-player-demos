@@ -1,7 +1,7 @@
 {
   "title": "Simulating Live TV",
   "description": "A demo that simulates live TV. The playlist item and position are determined by system date/time.",
-  "license": "Free",
+  "license": "All",
     	"showCode": true,
 	"apiCalls": [
 		"on('ready')", "play()", "seek()", "playlistItem()"

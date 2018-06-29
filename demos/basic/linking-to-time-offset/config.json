@@ -1,7 +1,7 @@
 {
   "title": "Linking to a Time Offset",
   "description": "In this demo the video starts from the beginning by default. However, if there is a time offset hash in the URL, the video will start from that time.",
-  "license": "Free",
+  "license": "All",
     	"showCode": true,
 	"apiCalls": [
 		"on('ready')", "on('firstFrame')"

@@ -1,0 +1,16 @@
+{
+	"title": "Loading Multiple Playlists",
+	"description": "Load and toggle between multiple playlists to control the player state",
+	"license": "All",
+	"showCode": true,
+	"layout": "vertical",
+	"apiCalls": [
+		"load()",
+		"on('playlistItem')",
+		"playlistItem()"
+	],
+	"author": {
+		"name": "John Kreitlow",
+		"githubUsername": "radium-v"
+	}
+}

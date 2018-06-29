@@ -25,15 +25,6 @@ var sources = [{
 	"width": 3640
 }];
 
-if (jwplayer.utils.isIOS()) {
-	// iOS doesn't support CORS.
-	// See: https://bugs.webkit.org/show_bug.cgi?id=135379
-	sources = [{
-		file: window.location.origin + '/static/AgqYcfAT-8yQ1cYbs.mp4',
-		type: 'video/mp4'
-	}];
-}
-
 var player = jwplayer('vr-player').setup({
 	primary: 'html5',
 	hlshtml: true,
@@ -54,6 +45,15 @@ var player = jwplayer('vr-player').setup({
 });
 
 var errorDiv = document.querySelector("#error");
+
+if (player.getEnvironment().OS.iOS) {
+	// iOS doesn't support CORS.
+	// See: https://bugs.webkit.org/show_bug.cgi?id=135379
+	sources = [{
+		file: window.location.origin + '/static/AgqYcfAT-8yQ1cYbs.mp4',
+		type: 'video/mp4'
+	}];
+}
 
 player.on('error', function(error) {
 	if (error.message == '360° video playback is not supported in this browser.') {

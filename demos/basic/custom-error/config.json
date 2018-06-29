@@ -1,7 +1,7 @@
 {
   "title": "A Custom Error Message",
   "description": "A demo of how users can control player behavior when an error occurs.",
-  "license": "Free",
+  "license": "All",
     	"showCode": true,
 	"apiCalls": [
 		"load()", "play()", "on('buffer')", "on('play')"

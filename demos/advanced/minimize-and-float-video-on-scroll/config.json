@@ -1,7 +1,7 @@
 {
   "title": "Minimize + Float Player on Scroll",
   "description": "A simple approach to minimizing and floating JW Player when the viewer scrolls beyond the video content.",
-  "license": "Free",
+  "license": "All",
   "showCode": true,
   "layout": "vertical",
   "author": {

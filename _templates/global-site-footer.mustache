@@ -1,40 +1,42 @@
 <footer class="global-site-footer">
   <div class="global-site-footer-container">
-    <ul class="global-site-footer-row">
-      <li>
+    <div class="product-links-row">
+      <div class="product-link-block" {%if include.selected == 'player' %}class="product-link-block selected"{% endif %}>
         <a href="//www.jwplayer.com">
-          <strong>JW Player</strong>
-          <span>Browse our products, company,<br> resources, and pricing</span>
+          <div class="product">JW Player</div>
+          <div class="description">Browse our products, company, resources, and pricing</div>
         </a>
-      </li>
-      <li>
+      </div>
+      <div class="product-link-block" {%if include.selected == 'dashboard' %}class="product-link-block selected"{% endif %}>
         <a href="//dashboard.jwplayer.com">
-          <strong>Dashboard</strong>
-          <span>Content, players, analytics,<br> and account management</span>
+          <div class="product">Dashboard</div>
+          <div class="description">Content, players, analytics, and account management</div>
         </a>
-      </li>
-      <li>
-        <a class="selected" href="//developer.jwplayer.com">
-          <strong>Developer</strong>
-          <span>Join the community, demos,<br> references, dev guides, and tools.</span>
+      </div>
+      <div class="product-link-block" {%if include.selected == 'developer' %}class="product-link-block selected"{% endif %}>
+        <a href="//developer.jwplayer.com">
+          <div class="product">Developer</div>
+          <div class="description">Join the community, demos, references, dev guides, and tools.</div>
         </a>
-      </li>
-      <li>
+      </div>
+      <div class="product-link-block" {%if include.selected == 'support' %}class="product-link-block selected"{% endif %}>
         <a href="//support.jwplayer.com">
-          <strong>Support</strong>
-          <span>Search the articles, ask the<br> community, or give feedback</span>
+          <div class="product">Support</div>
+          <div class="description">Search the articles, ask the community, or give feedback</div>
         </a>
-      </li>
-    </ul>
-    <div class="global-site-footer-row">
-      <p>&copy; 2016 Longtail Ad Solutions, Inc. All Rights Reserved.<br>
-        JW Player is a registered trademark.</p>
-      <ul>
-        <li><a href="//www.jwplayer.com/tos/">Terms of Service</a></li>
-        <li><a href="//www.jwplayer.com/privacy/">Privacy Policy</a></li>
-        <li><a href="//www.jwplayer.com/dmca/">DMCA</a></li>
-        <li><a href="//www.jwplayer.com/privacy/#ad-choices">Ad Choices</a></li>
-      </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-base-row">
+    <div class="copyright">
+      &copy; 2016 - <script>document.write(new Date().getFullYear())</script> | Longtail Ad Solutions, Inc. All Rights Reserved. JW Player is a registered trademark.
+    </div>
+    <div class="footer-links">
+      <a href="//www.jwplayer.com/careers/">Careers</a>
+      <a href="//www.jwplayer.com/tos/">Terms of Service</a>
+      <a href="//www.jwplayer.com/privacy/">Privacy Policy</a>
+      <a href="//www.jwplayer.com/dmca/">DMCA</a>
+      <a href="//www.jwplayer.com/privacy/#ad-choices">Ad Choices</a>
     </div>
   </div>
 </footer>

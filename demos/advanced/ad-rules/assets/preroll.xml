@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<VAST version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast3_draft.xsd">
+  <Ad id="midroll-1" sequence="1">
+    <InLine>
+      <AdSystem version="2.0">JW Player</AdSystem>
+      <AdTitle>Static Tag</AdTitle>
+      <Error>https://s3.amazonaws.com/demo.jwplayer.com/static-tag/pixel.gif?err=[ERRORCODE]</Error>
+      <Impression>https://s3.amazonaws.com/demo.jwplayer.com/static-tag/pixel.gif</Impression>
+      <Creatives>
+        <Creative sequence="1">
+          <Linear skipoffset="00:00:01">
+            <Duration>00:00:30</Duration>
+            <TrackingEvents>
+              <Tracking event="start">https://s3.amazonaws.com/demo.jwplayer.com/static-tag/pixel.gif</Tracking>
+              <Tracking event="firstQuartile">https://s3.amazonaws.com/demo.jwplayer.com/static-tag/pixel.gif</Tracking>
+              <Tracking event="midpoint">https://s3.amazonaws.com/demo.jwplayer.com/static-tag/pixel.gif</Tracking>
+              <Tracking event="thirdQuartile">https://s3.amazonaws.com/demo.jwplayer.com/static-tag/pixel.gif</Tracking>
+              <Tracking event="complete">https://s3.amazonaws.com/demo.jwplayer.com/static-tag/pixel.gif</Tracking>
+              <Tracking event="pause">https://s3.amazonaws.com/demo.jwplayer.com/static-tag/pixel.gif</Tracking>
+              <Tracking event="mute">https://s3.amazonaws.com/demo.jwplayer.com/static-tag/pixel.gif</Tracking>
+              <Tracking event="fullscreen">https://s3.amazonaws.com/demo.jwplayer.com/static-tag/pixel.gif</Tracking>
+            </TrackingEvents>
+            <VideoClicks>
+              <ClickThrough>https://www.jwplayer.com</ClickThrough>
+              <ClickTracking>https://s3.amazonaws.com/demo.jwplayer.com/static-tag/pixel.gif</ClickTracking>
+            </VideoClicks>
+            <MediaFiles>
+              <MediaFile id="1" delivery="progressive" type="video/mp4" bitrate="400" width="640" height="360">https://s3.amazonaws.com/demo.jwplayer.com/static-tag/jwplayer-30s.mp4</MediaFile>
+            </MediaFiles>
+          </Linear>
+        </Creative>
+        <Creative>
+         <CompanionAds>
+           <Companion id="1" width="300" height="250">
+             <StaticResource creativeType="image/jpg">https://s3.amazonaws.com/demo.jwplayer.com/static-tag/jwplayer-rectangle.jpg</StaticResource>
+             <CompanionClickThrough>https://www.jwplayer.com</CompanionClickThrough>
+           </Companion>
+           <Companion id="2" width="728" height="90">
+             <StaticResource creativeType="image/jpg">https://s3.amazonaws.com/demo.jwplayer.com/static-tag/jwplayer-leaderboard.jpg</StaticResource>
+             <CompanionClickThrough>https://www.jwplayer.com</CompanionClickThrough>
+          </Companion>
+        </CompanionAds>
+      </Creative>
+    </Creatives>
+  </InLine>
+</Ad>
+</VAST>
