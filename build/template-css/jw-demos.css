@@ -1608,8 +1608,8 @@ img.search-icon:hover {
 }
 .demos-index-header,
 .demos-single-header {
-  background-color: #0B7EF4;
-  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(236, 238, 242, 0.5);
+  border-bottom: 1px solid #D9DDE6;
   padding: 20px;
   position: relative;
 }
@@ -1638,7 +1638,7 @@ img.search-icon:hover {
 .demos-index-header h1,
 .demos-single-header h1 {
   font-family: 'Open Sans', sans-serif;
-  color: #FFFFFF;
+  color: #252525;
   font-size: 28px;
   font-weight: 400;
   padding: 30px 0;
@@ -1651,21 +1651,20 @@ img.search-icon:hover {
   margin: 0 auto;
   max-width: 360px;
 }
+.demos-index-header .search-input input {
+  border: 1px solid #AAB4C8;
+}
 .demos-index-header .search-input-field {
   width: 100%;
 }
 .demos-index-header .feeling-nerdy {
-  color: #FFFFFF;
-  border-bottom: solid 1px transparent;
+  color: #475470;
   display: inline-block;
   font-size: 14px;
   font-weight: 600;
   margin-top: 10px;
   text-decoration: none;
   transition: border-color 150ms ease;
-}
-.demos-index-header .feeling-nerdy:hover {
-  border-color: #85bffa;
 }
 .demos-single-header p {
   display: inline-block;
@@ -1675,59 +1674,6 @@ img.search-icon:hover {
   line-height: 1.6;
   margin-top: 10px;
   max-width: 500px;
-}
-.demos-single-header-icon::before {
-  background-size: 30px auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  content: '';
-  height: 70px;
-  position: absolute;
-  width: 70px;
-}
-.demos-single-header-icon-basic::before {
-  background-image: url('/img/embed.svg');
-}
-.demos-single-header-icon-developer-showcase::before {
-  background-image: url('/img/wrench.svg');
-}
-.demos-single-header-icon-innovation::before {
-  background-image: url('/img/cube.svg');
-}
-.demos-single-header-icon-toolbox::before {
-  background-image: url('/img/wrench.svg');
-}
-.demos-single-header-icon-advanced::before {
-  background-image: url('/img/advanced.svg');
-}
-.demos-single-header-icon-customization::before {
-  background-image: url('/img/customize.svg');
-}
-.demos-single-header-icon svg {
-  display: inline-block;
-  height: 70px;
-  width: 70px;
-}
-.demos-single-header-icon-basic svg {
-  fill: #FFB600;
-}
-.demos-single-header-icon-developer-showcase svg {
-  fill: #7864FF;
-}
-.demos-single-header-icon-innovation svg {
-  fill: #FF4664;
-}
-.demos-single-header-icon-toolbox svg {
-  fill: #2BBECF;
-}
-.demos-single-header-icon-advanced svg {
-  fill: #FF9400;
-}
-.demos-single-header-icon-customization svg {
-  fill: #475470;
-}
-.demos .page-body {
-  /**/
 }
 .demo-index,
 .demo-single {

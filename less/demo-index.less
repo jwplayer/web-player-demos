@@ -6,8 +6,8 @@
 
 .demos-index-header,
 .demos-single-header {
-  background-color: @jw-blue;
-  color: @white-transparent;
+  background-color: fade(@jw-light-gray, 50%);
+  border-bottom: 1px solid @jw-gray;
   padding: 20px;
   position: relative;
 
@@ -40,7 +40,7 @@
 .demos-index-header h1,
 .demos-single-header h1 {
   font-family: @open-sans;
-  color: @white;
+  color: @jw-charcoal;
   font-size: 28px;
   font-weight: @open-sans-regular;
   padding: 30px 0;
@@ -54,6 +54,10 @@
   display: block;
   margin: 0 auto;
   max-width: 360px;
+
+  input {
+    border: 1px solid @jw-slate;
+  }
 }
 
 .demos-index-header .search-input-field {
@@ -61,18 +65,13 @@
 }
 
 .demos-index-header .feeling-nerdy {
-  color: @white;
-  border-bottom: solid 1px transparent;
+  color: @jw-midnight;
   display: inline-block;
   font-size: 14px;
   font-weight: @open-sans-semibold;
   margin-top: 10px;
   text-decoration: none;
   transition: border-color 150ms ease;
-}
-
-.demos-index-header .feeling-nerdy:hover {
-  border-color: mix(@jw-blue, #fff, 50%);
 }
 
 .demos-single-header p {
@@ -85,73 +84,6 @@
   max-width: 500px;
 }
 
-.demos-single-header-icon::before {
-  background-size: 30px auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  content: '';
-  height: 70px;
-  position: absolute;
-  width: 70px;
-}
-
-.demos-single-header-icon-basic::before {
-  background-image: url('/img/embed.svg');
-}
-
-.demos-single-header-icon-developer-showcase::before {
-  background-image: url('/img/wrench.svg');
-}
-
-.demos-single-header-icon-innovation::before {
-  background-image: url('/img/cube.svg');
-}
-
-.demos-single-header-icon-toolbox::before {
-  background-image: url('/img/wrench.svg');
-}
-
-.demos-single-header-icon-advanced::before {
-  background-image: url('/img/advanced.svg');
-}
-
-.demos-single-header-icon-customization::before {
-  background-image: url('/img/customize.svg');
-}
-
-.demos-single-header-icon svg {
-  display: inline-block;
-  height: 70px;
-  width: 70px;
-}
-
-.demos-single-header-icon-basic svg {
-  fill: @jw-goldenrod;
-}
-
-.demos-single-header-icon-developer-showcase svg {
-  fill: @jw-purple;
-}
-
-.demos-single-header-icon-innovation svg {
-  fill: @jw-pink;
-}
-
-.demos-single-header-icon-toolbox svg {
-  fill: @jw-teal;
-}
-
-.demos-single-header-icon-advanced svg {
-  fill: @jw-gold;
-}
-
-.demos-single-header-icon-customization svg {
-  fill: @jw-midnight;
-}
-
-.demos .page-body {
-  /**/
-}
 
 .demo-index,
 .demo-single {
