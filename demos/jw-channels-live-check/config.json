@@ -3,6 +3,7 @@
     "description": "Sets an interval to check if JW Live Channels instance is live and embeds the stream if so.",
     "license": "All",
     "showCode": true,
+    "apiCalls": [],
     "author": {
         "name": "JW Player",
         "githubUsername": "jwplayer"
